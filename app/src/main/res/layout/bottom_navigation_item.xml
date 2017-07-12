@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="?android:attr/actionButtonStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/ic_round_box"
+    android:descendantFocusability="blocksDescendants"
+
+    >
+
+    <ImageView
+        android:id="@+id/grid_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_exam_prep_white" />
+
+    <TextView
+
+        android:id="@+id/grid_item_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grid_item_image"
+        android:layout_centerHorizontal="true"
+        android:text="Exam Prep"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textColor="@android:color/white"
+        android:singleLine="true"
+        />
+
+
+</RelativeLayout>
