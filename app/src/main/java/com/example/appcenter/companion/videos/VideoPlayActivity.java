@@ -53,7 +53,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
     Context context ;
     String[] videoData;
     MediaController mc;
-    private ProgressDialog mProgressDialog;
+   // private ProgressDialog mProgressDialog;
     private VideoView videoView;
     boolean isBookmarkChanged;
     private FrameLayout videoViewWrapper;
@@ -81,15 +81,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
 
     private void setMediaController(VideoView videoView)
     {
-        mc = new CustomMediaController(this){
-            public boolean dispatchKeyEvent(KeyEvent event)
-            {
-                if (event.getKeyCode() == KeyEvent.KEYCODE_BACK)
-                    ((Activity) getContext()).finish();
-
-                return super.dispatchKeyEvent(event);
-            }
-        };
+        mc = new CustomMediaController(this);
         mc.setMediaPlayer(videoView);
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
         lp.gravity = Gravity.BOTTOM;
@@ -104,10 +96,10 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_play);
 
-        mProgressDialog = new ProgressDialog(this);
+        /*mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setTitle(R.string.progress_dialog_description);
         mProgressDialog.show();
-
+*/
         Intent intent = getIntent();
         videoData = intent.getStringArrayExtra(VideoListActivity.KEY_SELECTED_VIDEO_DATA);
 
@@ -146,7 +138,6 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
 
     }
 
-
     @Override
     public void onBackPressed() {
         boolean check = (Boolean)bookmarkImageButton.getTag();
@@ -161,8 +152,6 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
         super.onBackPressed();
 
     }
-
-
 
     private  void toogleFullScreen()
     {
@@ -181,7 +170,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
         {
             getSupportActionBar().show();
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-             param = new LinearLayout.LayoutParams(
+            param = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     0, 1.0f
             );
@@ -205,8 +194,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
                 break;
             case CustomMediaController.fullScreenButtonId:
                 toogleFullScreen();
-
-                                            break;
+                break;
 
         }
     }
@@ -219,12 +207,14 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onPrepared(MediaPlayer mp) {
-        mProgressDialog.hide();
+      //  mProgressDialog.hide();
+     //   mProgressDialog.dismiss();
+
     }
 
     @Override
     public boolean onError(MediaPlayer mp, int what, int extra) {
-        Log.e("ERROR",what+"--"+extra);
+        Log.e("HTML",what+"--"+extra);
         return false;
     }
 
@@ -262,7 +252,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void failure(VimeoError error) {
                 Toast.makeText(context,R.string.video_loading_error,Toast.LENGTH_SHORT).show();
-                mProgressDialog.hide();
+                //mProgressDialog.hide();
             }
         });
     }

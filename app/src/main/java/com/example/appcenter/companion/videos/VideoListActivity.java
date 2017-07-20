@@ -2,12 +2,14 @@ package com.example.appcenter.companion.videos;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.database.SQLException;
 import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -70,6 +72,8 @@ public class VideoListActivity extends Fragment implements AdapterView.OnItemCli
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().show();
 
         View v = inflater.inflate(R.layout.activity_videos_list,container,false);
         bookmarkToggle = (ToggleButton)v.findViewById(R.id.toggleButton);

@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.example.appcenter.companion.courses.CourseChaptersList;
 import com.example.appcenter.companion.examprep.ExamPrepFragment;
 import com.example.appcenter.companion.identify.IdentifyActivity;
 import com.example.appcenter.companion.videos.VideoListActivity;
@@ -28,7 +29,7 @@ import com.example.appcenter.companion.videos.VideoListActivity;
 
 public class MainTabActivity extends AppCompatActivity implements TabHost.OnTabChangeListener {
     private FragmentTabHost mTabHost;
-    private Class tabNavigationClasses[] = {null,VideoListActivity.class,IdentifyActivity.class,ExamPrepFragment.class,IdentifyActivity.class};
+    private Class tabNavigationClasses[] = {null,VideoListActivity.class,IdentifyActivity.class,ExamPrepFragment.class,CourseChaptersList.class};
     private String tabNames[] = new String[5];
     private int tabImages[]= new int[5];
     @Override

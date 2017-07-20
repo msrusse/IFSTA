@@ -2,8 +2,10 @@ package com.example.appcenter.companion.examprep;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,11 +41,14 @@ public class ExamPrepFragment extends Fragment implements AdapterView.OnItemClic
         super.onCreate(savedInstanceState);
 
 
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().show();
 
         ArrayAdapter<String> x = new ArrayAdapter<String>(getContext(), R.layout.exam_prep_list_item_view,R.id.exam_prep_list_item_text_view,listAdapterItems);
         View v = inflater.inflate(R.layout.fragment_exam_prep, container, false);
