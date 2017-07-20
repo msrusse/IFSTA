@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:background="@color/transparentBlack"
+    android:orientation="vertical"
+    android:padding="5dp" >
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exam_prep_list_item_text_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textStyle="bold"
+    android:textColor="@android:color/white"
+    android:text="EXAM PREP"
+    android:textAlignment="viewEnd"
+    android:gravity="center_vertical"
+    android:textAppearance="@android:style/TextAppearance.Large">
+</TextView>
+
+    </LinearLayout>

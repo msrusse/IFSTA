@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_play_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:background="@android:color/black"
+    tools:context="com.example.appcenter.companion.videos.VideoPlayActivity">
+
+    <FrameLayout
+        android:id="@+id/video_view_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></VideoView>
+
+
+    </FrameLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <!--THE BELOW LAYOUT IS 1'ST ROW-->
+             <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+                 android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:id="@+id/chapter_number"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:textStyle="bold"
+                    android:text="Chapter 17"
+                    />
+                <TextView
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+
+                    android:id="@+id/chapter_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text = "Displays a video file. The VideoView class can load images from various sources."
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <ImageButton
+                    android:id="@+id/bookmark"
+                    android:src="@mipmap/ic_bookmark_unchecked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+            <!--END OF 1'ST ROW-->
+
+            <!--THE BELOW LAYOUT IS 2'ND ROW-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bottomNavigationHighlightColor"
+
+                >
+
+                <TextView
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:id="@+id/chapter_number_red"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:text="Chapter 17"
+                    />
+                <TextView
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:id="@+id/chapter_title_red"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text = "Displays a video file. The VideoView class can load images from various sources."
+                    />
+
+            </LinearLayout>
+            <!--END OF 2ND ROW-->
+
+            <!--THE BELOW LAYOUT IS 3'RD ROW-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                >
+
+                <TextView
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:textStyle="bold"
+                    android:text="STEPS"
+                    />
+                <TextView
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:id="@+id/steps_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text = "Displays a video file. The VideoView class can load images from various sources.
+When we want to create an Android application that has an Android Activity inside of which we are planning to play a video file, we should
+When we want to create an Android application that has an Android Activity inside of which we are planning to play a video file, we should"
+                    />
+
+            </LinearLayout>
+            <!--END OF 3RD ROW-->
+
+             </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
