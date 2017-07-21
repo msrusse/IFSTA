@@ -45,7 +45,7 @@ public class CourseWebView extends AppCompatActivity {
         mProgressDialog.setMessage("Loading...");
         setupBrowser();
 
-
+ 
     }
     private String retriveChapterLocationFromSharedPreferences() {
         String mapKeyInJSFile = "javascript:this.initialState[\"cmi.core.lesson_location\"]=";
