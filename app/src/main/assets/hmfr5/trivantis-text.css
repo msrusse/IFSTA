@@ -1,0 +1,49 @@
+/* Note: using div[name="dCon2"] does not work in IE for published content, position absolute fails bug 11142 */
+.ttxt
+{
+	position: absolute;
+	overflow: hidden;
+	font-family: Arial, sans-serif;
+	background-color: transparent !important;
+	font-size: 10pt;
+	background-image: url("images/trivantis-blank.gif");
+	color:black;
+	word-wrap:normal;
+	/*line-height:1.25;*/ /* Normal doesn't play nice cross-browser, search for line-height-default for more information, 1 cuts off text j,y,g etc in FF */
+}
+
+.ttxt p, .ttxt ul, .ttxt ol, .ttxt li
+{
+	margin: 0px;
+	text-indent: 0px;
+}
+
+.ttxt h1, .ttxt h2
+{
+	padding: 0px 0px 0px 0px;
+	font-weight:normal;
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+}
+
+.ttxt ul
+{
+	padding: 0px 0px 0px 30px;
+	list-style-type: disc;
+}
+
+.ttxt ol
+{
+	padding: 0px 0px 0px 30px;
+}
+
+.ttxt li
+{
+	padding: 0px;
+}
+
+.ttxt a
+{
+	cursor:pointer;
+	color:inherit;
+}
