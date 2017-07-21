@@ -25,8 +25,8 @@ public class CustomMediaController extends MediaController {
 
     @Override
     public void hide() {
-        //setVisibility(View.GONE);
-        //super.hide();
+        setVisibility(View.GONE);
+        super.hide();
     }
 
     @Override

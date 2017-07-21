@@ -53,7 +53,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
     Context context ;
     String[] videoData;
     MediaController mc;
-   // private ProgressDialog mProgressDialog;
+    private ProgressDialog mProgressDialog;
     private VideoView videoView;
     boolean isBookmarkChanged;
     private FrameLayout videoViewWrapper;
@@ -96,10 +96,10 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_play);
 
-        /*mProgressDialog = new ProgressDialog(this);
+        mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setTitle(R.string.progress_dialog_description);
         mProgressDialog.show();
-*/
+
         Intent intent = getIntent();
         videoData = intent.getStringArrayExtra(VideoListActivity.KEY_SELECTED_VIDEO_DATA);
 
@@ -207,8 +207,8 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onPrepared(MediaPlayer mp) {
-      //  mProgressDialog.hide();
-     //   mProgressDialog.dismiss();
+        mProgressDialog.hide();
+        mProgressDialog.dismiss();
 
     }
 
@@ -252,7 +252,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void failure(VimeoError error) {
                 Toast.makeText(context,R.string.video_loading_error,Toast.LENGTH_SHORT).show();
-                //mProgressDialog.hide();
+                mProgressDialog.hide();
             }
         });
     }
