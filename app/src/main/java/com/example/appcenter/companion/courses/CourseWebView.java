@@ -25,7 +25,6 @@ import com.example.appcenter.companion.R;
 public class CourseWebView extends AppCompatActivity {
     private WebView mwebView;
     private MyWebChromeClient myWebChromeClient;
-    String sharedPrefKey = "cmi.core.lesson_location";
     WebView scomWebView;
     ProgressDialog mProgressDialog=null;
     Button startCourseButton;
@@ -36,7 +35,6 @@ public class CourseWebView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_web_view);
-        chapter_location = retriveChapterLocationFromSharedPreferences();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         getSupportActionBar().hide();
         startCourseButton=(Button)findViewById(R.id.start_course_button);
@@ -46,52 +44,37 @@ public class CourseWebView extends AppCompatActivity {
         mProgressDialog.setMessage("Loading...");
         loadUrl();
 
- 
     }
-    private String retriveChapterLocationFromSharedPreferences() {
-        String mapKeyInJSFile = "javascript:this.initialState[\"cmi.core.lesson_location\"]=";
-        String defaultFile = "\'analyzing_the_incident_identifying_potential_hazards_analyzing_the_incident_identifying_potential_hazards_chemical_properties_page_1.html\'";
-        SharedPreferences sharedPreferences = getPreferences(Context.MODE_PRIVATE);
-        String sharedPrefValue = sharedPreferences.getString(sharedPrefKey, "DEFAULT");
-        if (sharedPrefValue.equals("DEFAULT"))
-            return mapKeyInJSFile+defaultFile;
-        else
-            return mapKeyInJSFile+sharedPrefValue;
-    }
-    private void storeChapterLocationToSharedPreferences(String lessonLocation)
-    {
-        SharedPreferences.Editor sharedPreferencesEditor = getPreferences(Context.MODE_PRIVATE).edit();
-        sharedPreferencesEditor.putString(sharedPrefKey,lessonLocation);
-        sharedPreferencesEditor.commit();
-    }
-    private void startCourse(View v)
+
+
+    public void startCourse(View v)
     {
         scomWebView.evaluateJavascript(launchSCO,null);
         v.setVisibility(View.GONE);
     }
-    private void setIncognitoBrowserSettings()
+    private void setBrowserSettings()
     {
-        scomWebView = new WebView(this);
+
         WebSettings settings = scomWebView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
         settings.setGeolocationEnabled(false);  // normally set true
-
-        CookieManager.getInstance().setAcceptCookie(false);
         settings.setSupportMultipleWindows(true);
+        settings.setUseWideViewPort(true);
+        settings.setBuiltInZoomControls(false);
+        /*
+        CookieManager.getInstance().setAcceptCookie(false);
         scomWebView.getSettings().setCacheMode(settings.LOAD_NO_CACHE);
         settings.setAppCacheEnabled(false);
         scomWebView.clearHistory();;
         scomWebView.clearCache(true);
         scomWebView.clearFormData();
-        settings.setUseWideViewPort(true);
-        settings.setBuiltInZoomControls(false);
         settings.setSaveFormData(false);
-
+        */
     }
     private void loadUrl() {
-  
-        setIncognitoBrowserSettings();
+
+        setBrowserSettings();
         myWebChromeClient = new MyWebChromeClient(mwebView);
         scomWebView.setWebChromeClient(myWebChromeClient);
         scomWebView.setWebViewClient(new WebViewClient() {
@@ -134,14 +117,6 @@ public class CourseWebView extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
-        String myJsString ="API.LMSGetValue('cmi.core.lesson_location')";
-        scomWebView.evaluateJavascript("(function() { return " + myJsString + "; })();", new ValueCallback<String>() {
-            @Override
-            public void onReceiveValue(String s) {
-                    storeChapterLocationToSharedPreferences(s);
-            }
-        });
         /*
         Note:Destroy both webviews to load correctly next time.
              Not destroying may cause webpage to load only for first time.
