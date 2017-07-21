@@ -41,7 +41,7 @@
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-<<<<<<< 062bf9feea2d742708f2d926481a2a387b7a03dc
+
         <activity android:name=".identify.IdentifyTestActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"/>
@@ -63,37 +63,9 @@
         <activity android:name=".examprep.ExamPrepScoreReview"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"></activity>
-=======
-        <activity
-            android:name=".identify.IdentifyTestActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".examprep.ExamPrepChaptersList"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".examprep.ExamPrepOptionsActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".examprep.ExamPrepTestActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".examprep.ExamPrepReportsActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".examprep.ExamPrepSettings"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".examprep.ExamPrepScoreReview"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait" />
+
         <activity android:name=".courses.CourseWebView"></activity>
->>>>>>> Course Tracking
+
     </application>
 
 </manifest>

@@ -28,7 +28,7 @@ public class CourseWebView extends AppCompatActivity {
     String sharedPrefKey = "cmi.core.lesson_location";
     WebView scomWebView;
     ProgressDialog mProgressDialog=null;
-    LinearLayout linearLayout;
+    Button startCourseButton;
     String chapter_location ="javascript:this.initialState[\"cmi.core.lesson_location\"]=\'analyzing_the_incident_identifying_potential_hazards_analyzing_the_incident_identifying_potential_hazards_chemical_properties_page_5.html\'";
     String launchFile = "javascript:this.launchFile=\'a002index.html\'";
     String launchSCO = "javascript:Utils.launchSCO()";
@@ -39,11 +39,12 @@ public class CourseWebView extends AppCompatActivity {
         chapter_location = retriveChapterLocationFromSharedPreferences();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         getSupportActionBar().hide();
+        startCourseButton=(Button)findViewById(R.id.start_course_button);
         mwebView = (WebView) findViewById(R.id.web_view);
         scomWebView = (WebView)findViewById(R.id.scom_view);
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setMessage("Loading...");
-        setupBrowser();
+        loadUrl();
 
  
     }
@@ -57,16 +58,21 @@ public class CourseWebView extends AppCompatActivity {
         else
             return mapKeyInJSFile+sharedPrefValue;
     }
-    public void startCourse(View v)
+    private void storeChapterLocationToSharedPreferences(String lessonLocation)
+    {
+        SharedPreferences.Editor sharedPreferencesEditor = getPreferences(Context.MODE_PRIVATE).edit();
+        sharedPreferencesEditor.putString(sharedPrefKey,lessonLocation);
+        sharedPreferencesEditor.commit();
+    }
+    private void startCourse(View v)
     {
         scomWebView.evaluateJavascript(launchSCO,null);
         v.setVisibility(View.GONE);
     }
-    private void setupBrowser() {
-
-        //scomWebView = new WebView(this);
+    private void setIncognitoBrowserSettings()
+    {
+        scomWebView = new WebView(this);
         WebSettings settings = scomWebView.getSettings();
-
         settings.setJavaScriptEnabled(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
         settings.setGeolocationEnabled(false);  // normally set true
@@ -82,6 +88,10 @@ public class CourseWebView extends AppCompatActivity {
         settings.setBuiltInZoomControls(false);
         settings.setSaveFormData(false);
 
+    }
+    private void loadUrl() {
+  
+        setIncognitoBrowserSettings();
         myWebChromeClient = new MyWebChromeClient(mwebView);
         scomWebView.setWebChromeClient(myWebChromeClient);
         scomWebView.setWebViewClient(new WebViewClient() {
@@ -107,6 +117,7 @@ public class CourseWebView extends AppCompatActivity {
                     mProgressDialog.dismiss();
                     scomWebView.evaluateJavascript(launchFile,null);
                     scomWebView.evaluateJavascript(chapter_location,null);
+                    startCourseButton.setVisibility(View.VISIBLE);
                 }
 
             }
@@ -128,13 +139,13 @@ public class CourseWebView extends AppCompatActivity {
         scomWebView.evaluateJavascript("(function() { return " + myJsString + "; })();", new ValueCallback<String>() {
             @Override
             public void onReceiveValue(String s) {
-                Log.e("HELLO", s); // Returns the value from the function
-                SharedPreferences.Editor sharedPreferencesEditor = getPreferences(Context.MODE_PRIVATE).edit();
-                sharedPreferencesEditor.putString(sharedPrefKey,s);
-                sharedPreferencesEditor.commit();
+                    storeChapterLocationToSharedPreferences(s);
             }
         });
-
+        /*
+        Note:Destroy both webviews to load correctly next time.
+             Not destroying may cause webpage to load only for first time.
+        */
         mwebView.destroy();
         scomWebView.destroy();
     }
