@@ -18,6 +18,12 @@ import android.widget.TextView;
 import com.example.appcenter.companion.MainActivity;
 import com.example.appcenter.companion.MainTabActivity;
 import com.example.appcenter.companion.R;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +36,7 @@ public class ExamPrepScoreReview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_prep_score_review);
+        getSupportActionBar().setTitle(R.string.title_exam_prep);
         Intent intent= getIntent();
         int wrongAnswers = intent.getIntExtra(ExamPrepTestActivity.KEY_TOTAL_WRONG_ANSWERS,-1);
         int correctAnswers = intent.getIntExtra(ExamPrepTestActivity.KEY_TOTAL_CORRECT_ANSWERS,-1);
@@ -39,13 +46,40 @@ public class ExamPrepScoreReview extends AppCompatActivity {
         ArrayList<Integer> incorrectAnsweredChoiceIndex = intent.getIntegerArrayListExtra(ExamPrepTestActivity.KEY_INCORRECT_CHOICES_SELECTED);
         ((TextView)findViewById(R.id.correct_answers_text_view)).setText(correctAnswers+"");
         ((TextView)findViewById(R.id.wrong_answers_text_view)).setText(wrongAnswers+"");
-        ((TextView)findViewById(R.id.score_text_view)).setText(String.format("%.1f",scoreInPercentage));
-
+        ((TextView)findViewById(R.id.completed_questions_text_view)).setText((wrongAnswers+correctAnswers)+"");
+        PieChart chart = (PieChart)findViewById(R.id.score_pie_chart);
+        setPieChart(chart,scoreInPercentage);
         ListView listView = (ListView)findViewById(R.id.wrong_questions_review_listview);
         adapter = new ExamPrepScoreReviewListAdapter(this,questionsData,incorrectAnsweredChoiceIndex);
         listView.setAdapter(adapter);
     }
 
+    private void setPieChart(PieChart pieChart,float scorePercentage)
+    {
+        List<PieEntry> entries = new ArrayList<>();
+        entries.add(new PieEntry(scorePercentage,"Correct %"));
+        entries.add(new PieEntry(100.0f-scorePercentage,"Incorrect %"));
+        PieDataSet dataSet = new PieDataSet(entries, "");
+        dataSet.setColors(new int[]{R.color.lightGreen,R.color.lightRed},this);
+        Description description=new Description();
+        description.setText("");
+
+        Legend legend = pieChart.getLegend();
+        legend.setForm(Legend.LegendForm.CIRCLE);
+        legend.setWordWrapEnabled(true);
+        PieData data = new PieData(dataSet);
+        pieChart.setCenterText(String.format("%.1f",scorePercentage));
+        pieChart.setCenterTextColor(R.color.lightGreen);
+        pieChart.setUsePercentValues(true);
+        pieChart.setDrawSliceText(false);
+        pieChart.setTouchEnabled(false);
+        pieChart.animateX(1000);
+        pieChart.setDrawEntryLabels(false);
+        pieChart.setDrawEntryLabels(false);
+        pieChart.setDescription(description);
+        pieChart.setData(data);
+        pieChart.invalidate();
+    }
     @Override
     public void onBackPressed() {
         super.onBackPressed();

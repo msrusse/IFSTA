@@ -23,6 +23,7 @@
         android:title="@string/cart_title"
         android:icon="@drawable/ic_action_shopping_cart"
         app:showAsAction="always"
+        android:visible="false"
         android:orderInCategory="2"
         />
 </menu>

@@ -47,8 +47,8 @@ public class ExamPrepFragment extends Fragment implements AdapterView.OnItemClic
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().show();
+        android.support.v7.app.ActionBar actionBar=((AppCompatActivity) getActivity()).getSupportActionBar();
+        actionBar.setTitle(R.string.title_exam_prep);
 
         ArrayAdapter<String> x = new ArrayAdapter<String>(getContext(), R.layout.exam_prep_list_item_view,R.id.exam_prep_list_item_text_view,listAdapterItems);
         View v = inflater.inflate(R.layout.fragment_exam_prep, container, false);

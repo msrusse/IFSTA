@@ -95,7 +95,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_play);
-
+        getSupportActionBar().setTitle(R.string.title_videos);
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setTitle(R.string.progress_dialog_description);
         mProgressDialog.show();
@@ -108,14 +108,10 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
         videoView = (VideoView)findViewById(R.id.video_view);
         bookmarkImageButton = (ImageButton)findViewById(R.id.bookmark);
         TextView chapterNumber = (TextView)findViewById(R.id.chapter_number);
-        TextView chapterNumberRed = (TextView)findViewById(R.id.chapter_number_red);
         TextView chapterTitle = (TextView)findViewById(R.id.chapter_title);
-        TextView chapterTitleRed = (TextView)findViewById(R.id.chapter_title_red);
         TextView stepsDescription = (TextView)findViewById(R.id.steps_description);
         chapterNumber.setText("Chapter "+videoData[0]);
-        chapterNumberRed.setText("Chapter "+videoData[0]);
         chapterTitle.setText(videoData[1]);
-        chapterTitleRed.setText(videoData[1]);
         stepsDescription.setText(Html.fromHtml(videoData[2]));
         bookmarkImageButton.setOnClickListener(this);
 
@@ -126,7 +122,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
 
         setBookmark();
         setMediaController(videoView);
-        getVideoUri(videoView,"206631738");
+        getVideoUri(videoView,videoData[5]);
 
     }
 

@@ -7,5 +7,10 @@
     <color name="bottomNavigationHighlightColor">#961019</color>
     <color name="transparentWhite">#70ffffff</color>
     <color name="transparentBlack">#70000000</color>
+    <color name="lightWhite">#f1f1f1</color>
+    <color name="darkWhite">#fdfdfe</color>
+    <color name="lightBlue">#e9f5fd</color>
+    <color name="lightGreen">#9fd29f</color>
+    <color name="lightRed">#cb696b</color>
 
 </resources>

@@ -134,7 +134,7 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_prep_test);
-
+        getSupportActionBar().setTitle(R.string.title_exam_prep);
         Intent intent = getIntent();
         int selectedOptions[] = intent.getIntArrayExtra(ExamPrepOptionsActivity.KEY_SELECTED_OPTIONS_DATA);
         NUMBER_OF_QUESTIONS_LIMIT = selectedOptions[0];

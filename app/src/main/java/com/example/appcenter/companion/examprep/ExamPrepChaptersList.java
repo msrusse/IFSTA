@@ -86,7 +86,7 @@ public class ExamPrepChaptersList extends AppCompatActivity implements AdapterVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //This is used to clear back stack at the final test stage
-
+        getSupportActionBar().setTitle(R.string.title_exam_prep);
         Intent intent = getIntent();
         optionSelected = intent.getIntExtra(ExamPrepFragment.SELECTED_OPTION_IN_EXAM_PREP_LIST,-1);
         List<String[]> listViewData;

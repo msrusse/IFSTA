@@ -19,6 +19,7 @@ public class ExamPrepSettings extends AppCompatActivity implements NumberPicker.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_prep_settings);
+        getSupportActionBar().setTitle(R.string.title_exam_prep);
         ((Button)findViewById(R.id.clear_test_results_button)).setOnClickListener(this);
         ((Button)findViewById(R.id.clear_study_deck_button)).setOnClickListener(this);
         NumberPicker picker = (NumberPicker)findViewById(R.id.max_number_of_attempts_number_picker);

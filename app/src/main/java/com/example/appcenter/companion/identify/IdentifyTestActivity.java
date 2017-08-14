@@ -30,6 +30,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class IdentifyTestActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
@@ -78,7 +79,7 @@ public class IdentifyTestActivity extends AppCompatActivity implements RadioGrou
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_identify_test);
-
+        getSupportActionBar().setTitle(R.string.title_identify);
         radioGroup = (RadioGroup) findViewById(R.id.container_radio_group);
         options[0] = (RadioButton) findViewById(radioButtonId[0]);
         options[1] = (RadioButton) findViewById(radioButtonId[1]);
@@ -95,7 +96,7 @@ public class IdentifyTestActivity extends AppCompatActivity implements RadioGrou
             myDbHelper = new DataBaseHelper(this);
             myDbHelper.openDataBase();
             unansweredQuestions = myDbHelper.getIdentifyUnansweredQuestions();
-
+            Collections.shuffle(unansweredQuestions);
         } catch (SQLException sqle) {
             throw sqle;
         }

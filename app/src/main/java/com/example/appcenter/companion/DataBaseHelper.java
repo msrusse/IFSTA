@@ -163,7 +163,7 @@ public class DataBaseHelper extends SQLiteOpenHelper{
         List<String[]> videoDataList = new ArrayList<String[]>();
         if (c.moveToFirst()) {
             while ( !c.isAfterLast() ) {
-                String videoDataListItem[] = {c.getString(0),c.getString(1),c.getString(2),c.getString(3),c.getInt(4)+""};
+                String videoDataListItem[] = {c.getString(0),c.getString(1),c.getString(2),c.getString(3),c.getInt(4)+"",c.getString(5),c.getString(6)};
                 videoDataList.add(videoDataListItem);
                 c.moveToNext();
             }

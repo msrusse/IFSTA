@@ -12,15 +12,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7405bdfe-e9dd-4d91-a5f9-26b55b633bf5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IFSTACompanionAndroid-Course.iml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/ChaptersListArrayAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/EqualWidthHeightTextView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circular_textview_drawable.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/courses_chapters_list_item.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/CoursesList.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/MediaPlayer/bigplay.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/MediaPlayer/control-default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/MediaPlayer/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/a.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/a002content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/a002index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/a002titlemgr.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/analyzing_the_incident_identifying_potential_hazards_analyzing_the_incident_identifying_potential_hazards_chemical_properties_page_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/apiwrapper11.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/device_Desktop/analyzing_the_incident_identifying_potential_hazards_analyzing_the_incident_identifying_potential_hazards_chemical_properties_page_1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/es6-promise-2.0.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/images/trivantis-blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/images/trivantis-dlg-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/images/trivantis-dlg-resize.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/images/trivantis-dlg-titlebar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/jquery-1.10.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/mediaelement-and-player.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/noAlertScript.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/scofunctions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-player.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-protect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-strings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-text.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-timedate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-titlemgr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis-wndobj.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantis.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/hmfr5/trivantisPage.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/SQLiteDatabase.db" afterPath="$PROJECT_DIR$/app/src/main/assets/SQLiteDatabase.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_25_3_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_3_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/constraint_layout_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/constraint_layout_1_0_2.xml" />
@@ -41,12 +78,35 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_25_3_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_25_3_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/transition_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/transition_25_3_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/DataBaseHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/DataBaseHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseChaptersList.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseChaptersList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseWebView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseWebView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/MyWebChromeClient.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/MyWebChromeClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepChaptersList.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepChaptersList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepOptionsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepOptionsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepReportsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepReportsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReview.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReview.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReviewListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReviewListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepSettings.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyTestActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyTestActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/CustomMediaController.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/CustomMediaController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoPlayActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoPlayActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_course_web_view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_course_web_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_options.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_options.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_score_review.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_score_review.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_video_play.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_video_play.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_course_chapters_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_course_chapters_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/wrong_question_review_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/wrong_question_review_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/videolist_action_bar_menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/videolist_action_bar_menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
@@ -80,34 +140,56 @@
     <favorites_list name="IFSTACompanionAndroid" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CourseWebView.java" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="CourseWebView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseWebView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="92" column="2" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="2" />
-              <folding>
-                <element signature="method#onCreate#0;class#CourseWebView#0" expanded="false" />
-                <element signature="method#retriveChapterLocationFromSharedPreferences#0;class#CourseWebView#0" expanded="false" />
-                <element signature="method#startCourse#0;class#CourseWebView#0" expanded="false" />
-                <element signature="method#setIncognitoBrowserSettings#0;class#CourseWebView#0" expanded="false" />
-                <element signature="method#shouldOverrideUrlLoading#0;class#4262:5234" expanded="false" />
-                <element signature="method#onPageStarted#0;class#4262:5234" expanded="false" />
-                <element signature="method#onBackPressed#0;class#CourseWebView#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="3689">
+              <caret line="144" column="44" selection-start-line="144" selection-start-column="44" selection-end-line="144" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseChaptersList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseChaptersList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="65" column="108" selection-start-line="65" selection-start-column="108" selection-end-line="65" selection-end-column="108" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChaptersListArrayAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/ChaptersListArrayAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1364">
+              <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_course_web_view.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course_web_view.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="837">
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyWebChromeClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/MyWebChromeClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1891">
+              <caret line="130" column="4" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
+              <folding>
+                <element signature="method#getMimeType#0;class#MyWebChromeClient#0" expanded="false" />
+                <element signature="method#getResponse#0;class#MyWebChromeClient#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,6 +199,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="layoutResourceFile_vertical" />
+        <option value="resourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -134,7 +218,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-all/55gk2rcmfc6p2dg9u9ohc3hw9/gradle-3.3" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\krishna\.gradle\wrapper\dists\gradle-3.3-all\55gk2rcmfc6p2dg9u9ohc3hw9\gradle-3.3" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -1642,6 +1726,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$" value="4501983740000" />
+        <entry key="C:\Users\krishna\Desktop\APP CENTER\IFSTACompanionAndroid" value="4502515804804" />
         <entry key="C:\Users\krishna\Desktop\APP CENTER\IFSTACompanionAndroid-Course" value="4501743618000" />
       </map>
     </option>
@@ -1992,29 +2077,53 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/CustomMediaController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_video_play.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/MainTabActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/assets/hmfr5/apiwrapper11.js" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoPlayActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_tab_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/main_tab_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/assets/hmfr5/a.htm" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseChaptersList.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/MyWebChromeClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_course_chapters_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_course_chapters_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/circular_textview_drawable.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/EqualWidthHeightTextView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/courses_chapters_list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/DataBaseHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/videolist_action_bar_menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_video_play.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/CustomMediaController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoPlayActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyTestActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepReportsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepSettings.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepChaptersList.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_options.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepOptionsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/wrong_question_review_list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReviewListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_score_review.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReview.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_course_web_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/MyWebChromeClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseWebView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/ChaptersListArrayAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseChaptersList.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="2560" />
-    <option name="height" value="1440" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2041,69 +2150,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFSTACompanionAndroid" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFSTACompanionAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFSTACompanionAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFSTACompanionAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFSTACompanionAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFSTACompanionAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFSTACompanionAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFSTACompanionAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scope" />
     </panes>
@@ -2112,12 +2165,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="device.picker.selection" value="2113910b" />
     <property name="com.android.hv.last.comp.width" value="586" />
-    <property name="android.project.structure.last.selected" value="Project" />
+    <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -2375,12 +2427,12 @@
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="CLEAR_LOGCAT" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="false" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -2408,7 +2460,7 @@
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
       </Native>
       <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="ENABLE_ADVANCED_PROFILING" value="false" />
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
@@ -2472,23 +2524,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22972003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24433658" sideWeight="0.5044346" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25843504" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3126822" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40235293" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890704" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11477363" sideWeight="0.4955654" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2744361" sideWeight="0.4955654" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2501,7 +2553,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2548,7 +2600,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Course Tracking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Course Tracking" />
+    <MESSAGE value="Identify Shuffle Added.&#10;ExamPrep Statistics UI changed.&#10;Course functionality with web-tracking.&#10;  Minor Changes and Bug fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Identify Shuffle Added.&#10;ExamPrep Statistics UI changed.&#10;Course functionality with web-tracking.&#10;  Minor Changes and Bug fixes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2557,143 +2610,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/widget/MediaController.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/util/MathUtils.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/app/LoadedApk.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/app/ContextImpl.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/content/ContextWrapper.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/graphics/drawable/ScaleDrawable.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/graphics/drawable/GradientDrawable.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/RenderNode.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/ViewGroup.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/graphics/Matrix.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/graphics/Rect.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/widget/ProgressBar.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/widget/AbsSeekBar.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/graphics/drawable/Drawable.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/graphics/drawable/DrawableWrapper.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/graphics/drawable/LayerDrawable.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/util/Singleton.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/app/ActivityManagerNative.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/app/Activity.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/accessibility/AccessibilityManager.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/os/Looper.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/os/Handler.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/os/MessageQueue.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/DisplayEventReceiver.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/KeyEvent.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/InputEventReceiver.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/InputEvent.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/Choreographer.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/os/Message.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/View.java" />
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/media/MediaPlayer.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/CustomMediaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/MainTabActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="31" column="137" selection-start-line="31" selection-start-column="137" selection-end-line="31" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/hmfr5/apiwrapper11.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepChaptersList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoPlayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="161" column="32" selection-start-line="161" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="100" column="64" selection-start-line="100" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/main_tab_view.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_tab_view.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="28" column="43" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="43" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/MyWebChromeClient/java.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/hmfr5/a.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="1038" column="49" selection-start-line="1038" selection-start-column="49" selection-end-line="1038" selection-end-column="49" />
-        </state>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/CoursesList.csv" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/MyWebChromeClient/java.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/hmfr5/a.htm" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-644">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseChaptersList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_course_chapters_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -2708,38 +2640,394 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/MyWebChromeClient.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/CoursesList.csv" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="37" column="70" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="70" />
+        <state relative-caret-position="203">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/color/navigation_item_selector.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_exam_prep.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_videos_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_course_chapters_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/BottomNavigationGridAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-496">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/circular_textview_drawable.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="61" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/DataBaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="167" column="14" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="133" column="52" selection-start-line="133" selection-start-column="52" selection-end-line="133" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/videolist_action_bar_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_video_play.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding>
+            <element signature="e#530#938#0" expanded="false" />
+            <element signature="e#944#5594#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/CustomMediaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoPlayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepChaptersList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="88" column="65" selection-start-line="88" selection-start-column="65" selection-end-line="88" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="76" column="48" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_settings.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_test.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_options.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1627">
+          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepOptionsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepReportsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/exam_prep_list_item_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="102" column="33" selection-start-line="102" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/courses_chapters_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/wrong_question_review_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="70" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="70" />
+          <folding>
+            <element signature="e#488#535#0" expanded="false" />
+            <element signature="e#822#869#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="101" column="39" selection-start-line="101" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="55" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_score_review.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <element signature="e#1220#2529#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
+            <element signature="e#2197#2244#0" expanded="false" />
+            <element signature="e#2542#3844#0" expanded="false" />
+            <element signature="e#2924#2971#0" expanded="false" />
+            <element signature="e#3512#3559#0" expanded="false" />
+            <element signature="e#3857#5159#0" expanded="false" />
+            <element signature="e#4237#4284#0" expanded="false" />
+            <element signature="e#4827#4874#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepChaptersListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="97" column="30" selection-start-line="97" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReviewListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="63" column="106" selection-start-line="63" selection-start-column="106" selection-end-line="63" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v3.0.2/a686f57c1f31262aaecf0cdf700d78eaa8f6b6ab/MPAndroidChart-v3.0.2-sources.jar!/com/github/mikephil/charting/components/Description.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/EqualWidthHeightTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1209">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course_web_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/MyWebChromeClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="1891">
+          <caret line="130" column="4" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
+          <folding>
+            <element signature="method#getMimeType#0;class#MyWebChromeClient#0" expanded="false" />
+            <element signature="method#getResponse#0;class#MyWebChromeClient#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseWebView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="92" column="2" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="2" />
-          <folding>
-            <element signature="method#onCreate#0;class#CourseWebView#0" expanded="false" />
-            <element signature="method#retriveChapterLocationFromSharedPreferences#0;class#CourseWebView#0" expanded="false" />
-            <element signature="method#startCourse#0;class#CourseWebView#0" expanded="false" />
-            <element signature="method#setIncognitoBrowserSettings#0;class#CourseWebView#0" expanded="false" />
-            <element signature="method#shouldOverrideUrlLoading#0;class#4262:5234" expanded="false" />
-            <element signature="method#onPageStarted#0;class#4262:5234" expanded="false" />
-            <element signature="method#onBackPressed#0;class#CourseWebView#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="3689">
+          <caret line="144" column="44" selection-start-line="144" selection-start-column="44" selection-end-line="144" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/ChaptersListArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/CourseChaptersList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="65" column="108" selection-start-line="65" selection-start-column="108" selection-end-line="65" selection-end-column="108" />
+          <folding />
         </state>
       </provider>
     </entry>
