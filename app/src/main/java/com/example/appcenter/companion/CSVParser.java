@@ -28,7 +28,6 @@ public class CSVParser {
             String finalRow[]=new String[3];
             while((csvLine=reader.readLine())!=null)
             {
-
                 String[] row =  csvLine.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 
                 if(!row[0].isEmpty())
