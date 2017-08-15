@@ -98,9 +98,8 @@ public class IdentifyActivity extends Fragment implements View.OnClickListener{
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        ((AppCompatActivity) getActivity()).getSupportActionBar().show();
-
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        android.support.v7.app.ActionBar actionBar=((AppCompatActivity) getActivity()).getSupportActionBar();
+            actionBar.setTitle(R.string.title_identify);
         View v = inflater.inflate(R.layout.activity_identify, container, false);
         LinearLayout layout = (LinearLayout)v.findViewById(R.id.identify_layout);
         answeredQuestions = (TextView)v.findViewById(R.id.answeredQuestions);

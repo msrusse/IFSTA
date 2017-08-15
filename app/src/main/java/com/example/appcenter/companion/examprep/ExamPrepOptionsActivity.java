@@ -26,7 +26,7 @@ public class ExamPrepOptionsActivity extends AppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_prep_options);
         //This is used to clear back stack at the final test stage
-
+        getSupportActionBar().setTitle(R.string.title_exam_prep);
         Intent intent = getIntent();
         String data = intent.getStringExtra(ExamPrepChaptersList.KEY_SELECTED_CHAPTERS);
         chapterNumbers=data.split(",");
@@ -38,6 +38,7 @@ public class ExamPrepOptionsActivity extends AppCompatActivity implements View.O
         numberPicker=(NumberPicker)findViewById(R.id.number_picker);
         numberPicker.setMinValue(1);
         numberPicker.setMaxValue(Integer.parseInt(chapterNumbers[chapterNumbers.length-1]));
+        numberPicker.setValue(Integer.parseInt(chapterNumbers[chapterNumbers.length-1]));
         saveButton.setOnClickListener(this);
     }
 

@@ -131,7 +131,7 @@ public class ItemArrayAdapter extends ArrayAdapter implements Filterable{
 
         viewHolder.chapterNumber.setText("Chapter "+stat[0]);
         viewHolder.chapterTitle.setText(stat[1]);
-
+        viewHolder.chapterPlayTime.setText(stat[6]);
         boolean isBookmarked = Integer.parseInt(stat[4])==1;
         //store to display only bookmarks
 

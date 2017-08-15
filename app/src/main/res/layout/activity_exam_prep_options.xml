@@ -89,7 +89,7 @@
             android:layout_weight="1"
              android:textColor="@android:color/white"
              android:textAppearance="@android:style/TextAppearance.Medium"
-             android:text="no"
+             android:text="No"
              />
         </RadioGroup>
     </LinearLayout>

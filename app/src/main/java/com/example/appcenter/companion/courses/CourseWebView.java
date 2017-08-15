@@ -3,6 +3,7 @@ package com.example.appcenter.companion.courses;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -14,6 +15,7 @@ import android.webkit.CookieManager;
 import android.webkit.ValueCallback;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -22,24 +24,39 @@ import android.widget.LinearLayout;
 
 import com.example.appcenter.companion.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
+
 public class CourseWebView extends AppCompatActivity {
     private WebView mwebView;
+    SharedPreferences sharedPreferences;
     private MyWebChromeClient myWebChromeClient;
     WebView scomWebView;
+    static Map<String,String> extraHeaders=new HashMap<String, String>();
     ProgressDialog mProgressDialog=null;
     Button startCourseButton;
-    String chapter_location ="javascript:this.initialState[\"cmi.core.lesson_location\"]=\'analyzing_the_incident_identifying_potential_hazards_analyzing_the_incident_identifying_potential_hazards_chemical_properties_page_5.html\'";
-    String launchFile = "javascript:this.launchFile=\'a002index.html\'";
+    String chapterURL="";
+    String chapterLocation ="javascript:this.initialState[\"cmi.core.lesson_location\"]=";
+    String launchFile = "javascript:this.launchFile=";
     String launchSCO = "javascript:Utils.launchSCO()";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_web_view);
+        Intent intent = getIntent();
+        chapterURL = intent.getStringExtra(CourseChaptersList.KEY_SELECTED_CHAPTER_DATA);
+        launchFile+="\'";
+        launchFile+=chapterURL;
+        launchFile+="\'";
+        sharedPreferences = getPreferences(Context.MODE_PRIVATE);
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         getSupportActionBar().hide();
         startCourseButton=(Button)findViewById(R.id.start_course_button);
         mwebView = (WebView) findViewById(R.id.web_view);
         scomWebView = (WebView)findViewById(R.id.scom_view);
+        extraHeaders.put("x-appdata-key","w1rSBt11JJl05CmBXfarn5ib2xfx9VWF");
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setMessage("Loading...");
         loadUrl();
@@ -62,28 +79,22 @@ public class CourseWebView extends AppCompatActivity {
         settings.setSupportMultipleWindows(true);
         settings.setUseWideViewPort(true);
         settings.setBuiltInZoomControls(false);
-        /*
+
         CookieManager.getInstance().setAcceptCookie(false);
         scomWebView.getSettings().setCacheMode(settings.LOAD_NO_CACHE);
         settings.setAppCacheEnabled(false);
-        scomWebView.clearHistory();;
+        scomWebView.clearHistory();
         scomWebView.clearCache(true);
         scomWebView.clearFormData();
         settings.setSaveFormData(false);
-        */
+
     }
     private void loadUrl() {
 
         setBrowserSettings();
-        myWebChromeClient = new MyWebChromeClient(mwebView);
+        myWebChromeClient = new MyWebChromeClient(mwebView,mProgressDialog);
         scomWebView.setWebChromeClient(myWebChromeClient);
         scomWebView.setWebViewClient(new WebViewClient() {
-
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return false;
-            }
 
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
@@ -99,18 +110,23 @@ public class CourseWebView extends AppCompatActivity {
                 if(mProgressDialog.isShowing()) {
                     mProgressDialog.dismiss();
                     scomWebView.evaluateJavascript(launchFile,null);
-                    scomWebView.evaluateJavascript(chapter_location,null);
+                    String chapterTitle = sharedPreferences.getString(chapterURL,"DEFAULT");
+                    if(!chapterTitle.equals("DEFAULT")&&(chapterTitle.length()!=0)) {
+                        chapterLocation += chapterTitle;
+                        scomWebView.evaluateJavascript(chapterLocation,null);
+                    }
                     startCourseButton.setVisibility(View.VISIBLE);
                 }
-
             }
         });
-        scomWebView.post(new Runnable() {
+        Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                scomWebView.loadUrl("https://samples.ifsta.org/hmfr5/a.htm");
             }
-        });
+        };
+
+//        scomWebView.post(runnable);
+        scomWebView.loadUrl("https://appdata.ifsta.org/hmfr5/a.htm",extraHeaders);
 
     }
 
@@ -121,7 +137,23 @@ public class CourseWebView extends AppCompatActivity {
         Note:Destroy both webviews to load correctly next time.
              Not destroying may cause webpage to load only for first time.
         */
-        mwebView.destroy();
-        scomWebView.destroy();
+        scomWebView.evaluateJavascript("(function() { return API.LMSGetValue(\'cmi.core.lesson_location\')})();", new ValueCallback<String>() {
+            @Override
+            public void onReceiveValue(String chapterTitle) {
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.putString(chapterURL,chapterTitle);
+                Log.e("HELLO",chapterTitle);
+                editor.commit();
+                 mwebView.destroy();
+                 scomWebView.destroy();
+            }
+        });
+
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+
     }
 }

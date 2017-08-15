@@ -45,7 +45,6 @@ public class CustomMediaController extends MediaController {
 
     public boolean dispatchKeyEvent(KeyEvent event)
     {
-        Log.e("HTML",event.getKeyCode()+"---11FROM CUSTOM MEDIA CONTROLLER");
 
         return super.dispatchKeyEvent(event);
     }

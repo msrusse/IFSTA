@@ -2,22 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/appcenter/Desktop/AppCenterAndroidProjects/IFSTACompanionAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\krishna\.android\build-cache\5d522ecf9efe0e2d523b6c91b88ffa8ea7679e1d\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="1e9eb1a8f4b435c1bdd7032dee3fb82364ffd686">
-        <dex dex="/Users/appcenter/Desktop/AppCenterAndroidProjects/IFSTACompanionAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7ce333cc696a021900881b46a79588fd15465350/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/appcenter/Desktop/AppCenterAndroidProjects/IFSTACompanionAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/appcenter/Desktop/AppCenterAndroidProjects/IFSTACompanionAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e7907cc2c8784a0d7291f088139acc1cbbee7833/classes.dex" />
+        sha1="18e4d2146490b76b3282f1949ed6ffd052a0fc23">
+        <dex dex="C:\Users\krishna\Desktop\APP CENTER\IFSTACompanionAndroid\app\build\intermediates\pre-dexed\debug\classes_3a1a8195defe15e6255cc355c5aaa3f33ba8f702.jar" />
     </item>
 
 </items>

@@ -31,6 +31,7 @@ public class ExamPrepReportsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_prep_reports);
+        getSupportActionBar().setTitle(R.string.title_exam_prep);
         List<Float> chartData = getData();
         ArrayList<BarEntry> entries = new ArrayList<BarEntry>();
 
