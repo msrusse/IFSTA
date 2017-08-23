@@ -35,7 +35,7 @@
             android:name=".videos.VideoPlayActivity"
             android:configChanges="orientation|screenSize"
             android:hardwareAccelerated="true"
-            android:screenOrientation="portrait" />
+             />
         <activity
             android:name=".MainTabActivity"
             android:configChanges="orientation|screenSize"

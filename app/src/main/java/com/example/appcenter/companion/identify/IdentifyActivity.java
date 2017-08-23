@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.appcenter.companion.DataBaseHelper;
 import com.example.appcenter.companion.R;
@@ -105,7 +106,7 @@ public class IdentifyActivity extends Fragment implements View.OnClickListener{
         answeredQuestions = (TextView)v.findViewById(R.id.answeredQuestions);
         answeredQuestions.setSelected(true);
         layout.setOnClickListener(this);
-
+        Toast.makeText(getContext(),R.string.toast_identify_notification,Toast.LENGTH_LONG).show();
         return v;
     }
 

@@ -23,8 +23,8 @@ import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
 
+import com.devbrackets.android.exomedia.ui.widget.VideoView;
 import com.example.appcenter.companion.R;
 import com.example.appcenter.companion.videos.CustomMediaController;
 import com.example.appcenter.companion.videos.VideoListActivity;
@@ -34,6 +34,7 @@ import com.vimeo.networking.callbacks.ModelCallback;
 import com.vimeo.networking.model.Video;
 import com.vimeo.networking.model.VideoFile;
 import com.vimeo.networking.model.error.VimeoError;
+import com.vimeo.networking.model.playback.Play;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -82,14 +83,16 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
     private void setMediaController(VideoView videoView)
     {
         mc = new CustomMediaController(this);
-        mc.setMediaPlayer(videoView);
+        //mc.setMediaPlayer(videoView);
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
         lp.gravity = Gravity.BOTTOM;
         mc.setLayoutParams(lp);
         ((ViewGroup) mc.getParent()).removeView(mc);
         videoViewWrapper.addView(mc);
-        videoView.setMediaController(mc);
+        //videoView.setMediaController(mc);
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,8 +100,8 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_video_play);
         getSupportActionBar().setTitle(R.string.title_videos);
         mProgressDialog = new ProgressDialog(this);
-        mProgressDialog.setTitle(R.string.progress_dialog_description);
-        mProgressDialog.show();
+       // mProgressDialog.setTitle(R.string.progress_dialog_description);
+       // mProgressDialog.show();
 
         Intent intent = getIntent();
         videoData = intent.getStringArrayExtra(VideoListActivity.KEY_SELECTED_VIDEO_DATA);
@@ -115,13 +118,13 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
         stepsDescription.setText(Html.fromHtml(videoData[2]));
         bookmarkImageButton.setOnClickListener(this);
 
-        videoView.setOnTouchListener(this);
+        /*videoView.setOnTouchListener(this);
         videoView.setOnPreparedListener(this);
         videoView.setOnErrorListener(this);
         videoView.setOnCompletionListener(this);
-
-        setBookmark();
         setMediaController(videoView);
+*/
+        setBookmark();
         getVideoUri(videoView,videoData[5]);
 
     }
@@ -235,12 +238,27 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
 
             @Override
             public void success(Video o) {
+               /* Play play = o.play;
 
-                ArrayList<VideoFile> videoFiles = o.files;
+                if (play!=null)
+                {
+                    ArrayList<VideoFile> hlslFile = play.getProgressiveVideoFiles();
+                    VideoFile videoFile = hlslFile.get(0); // you could sort these files by size, fps, width/height
+                    String link = videoFile.getLink();
+                    videoView.setVideoURI(Uri.parse(link));
+                    Log.e("HELLO",hlslFile.size()+"");
+
+                }*/
+
+                ArrayList<VideoFile> videoFiles = o.getDownload();
                 if(videoFiles != null && !videoFiles.isEmpty()) {
+                    Log.e("HELLO",videoFiles.size()+"");
                     VideoFile videoFile = videoFiles.get(0); // you could sort these files by size, fps, width/height
                     String link = videoFile.getLink();
                     videoView.setVideoURI(Uri.parse(link));
+
+                }else {
+                    Log.e("HELLO","play is null"+videoFiles);
 
                 }
             }
@@ -248,7 +266,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void failure(VimeoError error) {
                 Toast.makeText(context,R.string.video_loading_error,Toast.LENGTH_SHORT).show();
-                mProgressDialog.hide();
+              //  mProgressDialog.hide();
             }
         });
     }
