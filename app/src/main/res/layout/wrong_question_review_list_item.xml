@@ -34,7 +34,7 @@
         android:id="@+id/wrong_answer"
         android:paddingTop="@dimen/exam_prep_acitivity_radio_group_margin"
         android:textAppearance="@android:style/TextAppearance.Small"
-        android:text="@string/identify_delete_preferences_description"
+        android:text=""
         android:textColor="@color/lightRed"
         android:textStyle="italic"
         android:layout_width="match_parent"

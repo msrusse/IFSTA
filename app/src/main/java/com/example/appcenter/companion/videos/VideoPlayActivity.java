@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -19,42 +20,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.devbrackets.android.exomedia.listener.OnCompletionListener;
+import com.devbrackets.android.exomedia.listener.OnPreparedListener;
+import com.devbrackets.android.exomedia.ui.widget.VideoControls;
 import com.devbrackets.android.exomedia.ui.widget.VideoView;
 import com.example.appcenter.companion.R;
-import com.example.appcenter.companion.videos.CustomMediaController;
-import com.example.appcenter.companion.videos.VideoListActivity;
 import com.vimeo.networking.Configuration;
 import com.vimeo.networking.VimeoClient;
 import com.vimeo.networking.callbacks.ModelCallback;
 import com.vimeo.networking.model.Video;
 import com.vimeo.networking.model.VideoFile;
 import com.vimeo.networking.model.error.VimeoError;
-import com.vimeo.networking.model.playback.Play;
-
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.Socket;
-import java.net.URL;
 import java.util.ArrayList;
 
-import static java.net.Authenticator.RequestorType.SERVER;
 
 
-public class VideoPlayActivity extends AppCompatActivity implements View.OnClickListener,View.OnTouchListener,MediaPlayer.OnPreparedListener,MediaPlayer.OnErrorListener,MediaPlayer.OnCompletionListener{
+public class VideoPlayActivity extends AppCompatActivity implements View.OnClickListener,OnCompletionListener,OnPreparedListener{
     ImageButton bookmarkImageButton;
+    ImageButton fullScreenButton;
     Context context ;
     String[] videoData;
-    MediaController mc;
-    private ProgressDialog mProgressDialog;
     private VideoView videoView;
     boolean isBookmarkChanged;
     private FrameLayout videoViewWrapper;
@@ -70,43 +60,28 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
             bookmarkImageButton.setTag(new Boolean(false));
         }
     }
-    private void hideMediaController()
-    {
-        if(mc.getVisibility()==View.GONE)
-        {
-            mc.show();
-            mc.setVisibility(View.VISIBLE);
-        }
 
+    @Override
+    public void onPrepared() {
+        if(videoView.isPlaying())
+            videoView.pause();
     }
 
-    private void setMediaController(VideoView videoView)
-    {
-        mc = new CustomMediaController(this);
-        //mc.setMediaPlayer(videoView);
-        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-        lp.gravity = Gravity.BOTTOM;
-        mc.setLayoutParams(lp);
-        ((ViewGroup) mc.getParent()).removeView(mc);
-        videoViewWrapper.addView(mc);
-        //videoView.setMediaController(mc);
+    @Override
+    public void onCompletion() {
+        videoView.restart();
     }
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_play);
         getSupportActionBar().setTitle(R.string.title_videos);
-        mProgressDialog = new ProgressDialog(this);
-       // mProgressDialog.setTitle(R.string.progress_dialog_description);
-       // mProgressDialog.show();
+        context = getApplicationContext();
 
         Intent intent = getIntent();
         videoData = intent.getStringArrayExtra(VideoListActivity.KEY_SELECTED_VIDEO_DATA);
 
-        context = getApplicationContext();
         videoViewWrapper = (FrameLayout) findViewById(R.id.video_view_wrapper);
         videoView = (VideoView)findViewById(R.id.video_view);
         bookmarkImageButton = (ImageButton)findViewById(R.id.bookmark);
@@ -115,15 +90,23 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
         TextView stepsDescription = (TextView)findViewById(R.id.steps_description);
         chapterNumber.setText("Chapter "+videoData[0]);
         chapterTitle.setText(videoData[1]);
+        /*
+         See Database table VIDEO_DATA in assets.
+         Just truncating the text from the string(Warning message).
+          */
+        videoData[2]=videoData[2].substring(videoData[2].indexOf("<br><b>Step 1"),videoData[2].length());
         stepsDescription.setText(Html.fromHtml(videoData[2]));
         bookmarkImageButton.setOnClickListener(this);
 
-        /*videoView.setOnTouchListener(this);
-        videoView.setOnPreparedListener(this);
-        videoView.setOnErrorListener(this);
         videoView.setOnCompletionListener(this);
-        setMediaController(videoView);
-*/
+        videoView.setOnPreparedListener(this);
+
+        VideoControls videoControls=videoView.getVideoControls();
+        fullScreenButton =(ImageButton)videoControls.findViewById(R.id.exomedia_controls_next_btn);
+        fullScreenButton.setVisibility(View.VISIBLE);
+        fullScreenButton.setImageResource(R.drawable.ic_fullscreen_media_stretch);
+        fullScreenButton.setOnClickListener(this);
+        fullScreenButton.setScaleType(ImageView.ScaleType.FIT_XY);
         setBookmark();
         getVideoUri(videoView,videoData[5]);
 
@@ -132,9 +115,7 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onPause() {
         super.onPause();
-        //Pause video playing if user shuts off the screen
         videoView.pause();
-
     }
 
     @Override
@@ -152,31 +133,6 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
 
     }
 
-    private  void toogleFullScreen()
-    {
-        int currentOrientation = getRequestedOrientation();
-
-        LinearLayout.LayoutParams param;
-        if(currentOrientation==ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
-            getSupportActionBar().hide();
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-            param  = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.MATCH_PARENT
-                    , 2.0f
-            );
-        }else
-        {
-            getSupportActionBar().show();
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            param = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    0, 1.0f
-            );
-        }
-        videoViewWrapper.setLayoutParams(param);
-    }
-
     @Override
     public void onClick(View v) {
         switch(v.getId())
@@ -191,34 +147,44 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
                 }
                 bookmarkImageButton.setTag(!check);
                 break;
-            case CustomMediaController.fullScreenButtonId:
-                toogleFullScreen();
+            case R.id.exomedia_controls_next_btn:
+                if(getRequestedOrientation()==ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                    fullScreenButton.setImageResource(R.drawable.ic_fullscreen_media_shrink);
+                }
+                else {
+                    fullScreenButton.setImageResource(R.drawable.ic_fullscreen_media_stretch);
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                }
                 break;
+
+
+
 
         }
     }
 
     @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        hideMediaController();
-        return true;
-    }
+    public void onConfigurationChanged(android.content.res.Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
 
-    @Override
-    public void onPrepared(MediaPlayer mp) {
-        mProgressDialog.hide();
-        mProgressDialog.dismiss();
-
-    }
-
-    @Override
-    public boolean onError(MediaPlayer mp, int what, int extra) {
-        Log.e("HTML",what+"--"+extra);
-        return false;
-    }
-
-    @Override
-    public void onCompletion(MediaPlayer mp) {
+        LinearLayout.LayoutParams param;
+        if(newConfig.orientation== android.content.res.Configuration.ORIENTATION_LANDSCAPE) {
+            getSupportActionBar().hide();
+            param  = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.MATCH_PARENT
+                    , 2.0f
+            );
+        }else
+        {
+            getSupportActionBar().show();
+            param = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    0, 1.0f
+            );
+        }
+        videoViewWrapper.setLayoutParams(param);
 
     }
 
@@ -238,35 +204,19 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
 
             @Override
             public void success(Video o) {
-               /* Play play = o.play;
-
-                if (play!=null)
-                {
-                    ArrayList<VideoFile> hlslFile = play.getProgressiveVideoFiles();
-                    VideoFile videoFile = hlslFile.get(0); // you could sort these files by size, fps, width/height
-                    String link = videoFile.getLink();
-                    videoView.setVideoURI(Uri.parse(link));
-                    Log.e("HELLO",hlslFile.size()+"");
-
-                }*/
 
                 ArrayList<VideoFile> videoFiles = o.getDownload();
                 if(videoFiles != null && !videoFiles.isEmpty()) {
-                    Log.e("HELLO",videoFiles.size()+"");
                     VideoFile videoFile = videoFiles.get(0); // you could sort these files by size, fps, width/height
                     String link = videoFile.getLink();
+
                     videoView.setVideoURI(Uri.parse(link));
-
-                }else {
-                    Log.e("HELLO","play is null"+videoFiles);
-
                 }
             }
 
             @Override
             public void failure(VimeoError error) {
                 Toast.makeText(context,R.string.video_loading_error,Toast.LENGTH_SHORT).show();
-              //  mProgressDialog.hide();
             }
         });
     }

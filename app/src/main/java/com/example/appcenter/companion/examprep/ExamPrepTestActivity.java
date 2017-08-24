@@ -30,6 +30,7 @@ import com.example.appcenter.companion.R;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 
 public class ExamPrepTestActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, View.OnClickListener, DialogInterface.OnClickListener {
@@ -39,7 +40,8 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
     public static final String KEY_INCORRECT_CHOICES_SELECTED = "com.example.appcenter.companion.INCORRECT_CHOICES_SELECTED";
     public static final int EXAM_PREP_BOTTOM_NAVIGATION_POSTION = 2;
     final int maxChoices = 4;
-    int currentQuestionNumber = 0, correctAnswer;
+    int currentQuestionNumber = 0, correctAnswer=0;
+    Random randomCorrectAnswerShuffler=new Random();
     MenuItem actionBarItem;
     final int MENU_ITEM_ID = 1;
     int NUMBER_OF_QUESTIONS_LIMIT = 0;
@@ -109,6 +111,15 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
             question.setText(data[6]);
             pageReference.setText(chapterNumber + data[7]);
             correctAnswer = Integer.parseInt(data[8]);
+            //Shuffling Options.
+            int shuffledAnswer;
+            do{
+                shuffledAnswer=randomCorrectAnswerShuffler.nextInt(4);
+            }while(shuffledAnswer==correctAnswer);
+            options[correctAnswer].setText(data[shuffledAnswer+2]);
+            options[shuffledAnswer].setText(data[correctAnswer+2]);
+            correctAnswer=shuffledAnswer;
+
             currentQuestionNumber++;
         } else {
             //calling dialog interface on click method to show reports.
@@ -214,13 +225,15 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
         String chapterNumber = (data[0].split("-"))[0];
         myDbHelper.getSQLiteDatabaseObject().execSQL("UPDATE EXAM_PREP_CHAPTER_TITLES SET questionsAttemptedCount= questionsAttemptedCount+1 where _id='" + chapterNumber + "';");
 
+        incorrectAnsweredQuestions.add(data);
+
 
         if (isCorrect == false) {
-            incorrectAnsweredQuestions.add(data);
             incorrectAnsweredChoiceIndex.add(selectedOptionIndex);
             if (ADD_MISSED_QUESTIONS_TO_STUDYDECK)
                 addQuestionToStudyDeck();
         } else {
+            incorrectAnsweredChoiceIndex.add(-1);
             myDbHelper.getSQLiteDatabaseObject().execSQL("UPDATE EXAM_PREP_CHAPTER_TITLES SET correctAnswersCount= correctAnswersCount+1 where _id='" + chapterNumber + "';");
             ++totalCorrectAnswers;
         }
@@ -277,7 +290,7 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
 
         if (which == 0) {
             Intent intent = new Intent(this, ExamPrepScoreReview.class);
-            intent.putExtra(KEY_TOTAL_WRONG_ANSWERS, incorrectAnsweredChoiceIndex.size());
+            intent.putExtra(KEY_TOTAL_WRONG_ANSWERS, incorrectAnsweredChoiceIndex.size()-totalCorrectAnswers);
             intent.putExtra(KEY_TOTAL_CORRECT_ANSWERS, totalCorrectAnswers);
             intent.putExtra(KEY_INCORRECT_QUESTIONS_DATA, incorrectAnsweredQuestions);
             intent.putExtra(KEY_INCORRECT_CHOICES_SELECTED, incorrectAnsweredChoiceIndex);
