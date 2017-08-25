@@ -3,6 +3,7 @@ package com.example.appcenter.companion.courses;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.net.http.SslError;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.MimeTypeMap;
 import android.webkit.SslErrorHandler;
+import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -32,13 +34,18 @@ import okhttp3.Response;
 
 public class MyWebChromeClient extends WebChromeClient{
 
-    WebView mWebView;
+    WebView mWebView,mScomWebView;
+
+    SharedPreferences.Editor courseProgresSharedPreferencesEditor;
     ProgressDialog mProgressDialog;
-    public MyWebChromeClient(WebView webView,ProgressDialog dialog)
+    public MyWebChromeClient(WebView webView,ProgressDialog dialog,WebView scomWebView,String sharedPrefsKey,Context context)
     {
         mWebView = webView;
         mProgressDialog=dialog;
+        mScomWebView=scomWebView;
 
+        SharedPreferences courseProgresSharedPreferences=context.getSharedPreferences(sharedPrefsKey.substring(0,sharedPrefsKey.indexOf("/")),Context.MODE_PRIVATE);
+        courseProgresSharedPreferencesEditor = courseProgresSharedPreferences.edit();
     }
 
 
@@ -92,7 +99,8 @@ public class MyWebChromeClient extends WebChromeClient{
         }
     }
     @Override
-    public boolean onCreateWindow(WebView view, boolean isDialog, boolean isUserGesture, Message resultMsg) {
+    public boolean onCreateWindow(WebView view, boolean isDialog, boolean isUserGesture, Message resultMsg)
+    {
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
         //settings.setJavaScriptCanOpenWindowsAutomatically(true);
@@ -115,6 +123,25 @@ public class MyWebChromeClient extends WebChromeClient{
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
                 mProgressDialog.show();
+
+            }
+
+            @Override
+            public void onLoadResource(WebView view, String url) {
+                super.onLoadResource(view, url);
+                mScomWebView.evaluateJavascript("(function() { return API.LMSGetValue(\'cmi.core.lesson_location\')})();", new ValueCallback<String>() {
+                    @Override
+                    public void onReceiveValue(String chapterTitle) {
+                        //Remove quotes from url.
+                        chapterTitle=chapterTitle.replace("\"","");
+                        if(chapterTitle.length()!=0)
+                        {
+                           courseProgresSharedPreferencesEditor.putBoolean(chapterTitle,true);
+                            courseProgresSharedPreferencesEditor.commit();
+                        }
+
+                    }
+                });
             }
 
             @Override
@@ -142,7 +169,13 @@ public class MyWebChromeClient extends WebChromeClient{
 
 
         });
-        mWebView.setWebChromeClient(new WebChromeClient());
+        mWebView.setWebChromeClient(new WebChromeClient(){
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                super.onProgressChanged(view, newProgress);
+
+            }
+        });
         mWebView.setInitialScale(1);
 
         WebView.WebViewTransport transport = (WebView.WebViewTransport) resultMsg.obj;

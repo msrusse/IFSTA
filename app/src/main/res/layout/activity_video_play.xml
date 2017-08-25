@@ -21,13 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:useDefaultControls="true"/>
-        <!--
-        <VideoView
-            android:id="@+id/video_view"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></VideoView>
-        -->
 
     </FrameLayout>
 
@@ -43,7 +36,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bottomNavigationHighlightColor"
+            android:background="@android:color/black"
                  android:paddingLeft="@dimen/activity_vertical_margin"
             android:weightSum="5">
 
@@ -66,7 +59,7 @@
                     />
                 <TextView
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
-
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
                     android:id="@+id/chapter_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -109,17 +102,6 @@
                 >
 
                 <TextView
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginTop="@dimen/activity_horizontal_margin"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:textColor="@android:color/black"
-                    android:textAppearance="@android:style/TextAppearance.Large"
-                    android:textStyle="bold"
-                    android:text="STEPS"
-                    />
-                <TextView
-                    android:layout_marginTop="@dimen/activity_horizontal_margin"
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:id="@+id/steps_description"
                     android:layout_width="match_parent"

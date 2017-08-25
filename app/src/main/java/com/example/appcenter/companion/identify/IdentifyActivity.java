@@ -28,11 +28,12 @@ public class IdentifyActivity extends Fragment implements View.OnClickListener{
 
     TextView answeredQuestions;
     DataBaseHelper myDbHelper;
-    String totalQuestions="";
+    long totalQuestions;
     public void setAnsweredQuestionsCount()
     {
-        float totalAnswered =(float) myDbHelper.getAnsweredQuestionsCount();
-        answeredQuestions.setText((int)totalAnswered+" of "+totalQuestions);
+
+        long remainingQuestions =totalQuestions-myDbHelper.getAnsweredQuestionsCount();
+        answeredQuestions.setText(remainingQuestions+" of "+totalQuestions+" left");
     }
     private void clearAllAnsweredQuestions()
     {
@@ -91,7 +92,7 @@ public class IdentifyActivity extends Fragment implements View.OnClickListener{
         try {
             myDbHelper = new DataBaseHelper(getContext());
             myDbHelper.openDataBase();
-            totalQuestions = Long.toString(myDbHelper.getTotalQuestionsCount());
+            totalQuestions = myDbHelper.getTotalQuestionsCount();
         }catch(SQLException sqle){
             throw sqle;
         }

@@ -92,7 +92,7 @@ public class CourseWebView extends AppCompatActivity {
     private void loadUrl() {
 
         setBrowserSettings();
-        myWebChromeClient = new MyWebChromeClient(mwebView,mProgressDialog);
+        myWebChromeClient = new MyWebChromeClient(mwebView,mProgressDialog,scomWebView,chapterURL,this);
         scomWebView.setWebChromeClient(myWebChromeClient);
         scomWebView.setWebViewClient(new WebViewClient() {
 
@@ -125,7 +125,6 @@ public class CourseWebView extends AppCompatActivity {
             }
         };
 
-//        scomWebView.post(runnable);
         scomWebView.loadUrl("https://appdata.ifsta.org/hmfr5/a.htm",extraHeaders);
 
     }
@@ -142,18 +141,16 @@ public class CourseWebView extends AppCompatActivity {
             public void onReceiveValue(String chapterTitle) {
                 SharedPreferences.Editor editor=sharedPreferences.edit();
                 editor.putString(chapterURL,chapterTitle);
-                Log.e("HELLO",chapterTitle);
                 editor.commit();
                  mwebView.destroy();
                  scomWebView.destroy();
             }
         });
+        Intent intent = new Intent();
+        setResult(RESULT_CANCELED,intent);
+        finish();
 
     }
 
-    @Override
-    public void finish() {
-        super.finish();
 
-    }
 }

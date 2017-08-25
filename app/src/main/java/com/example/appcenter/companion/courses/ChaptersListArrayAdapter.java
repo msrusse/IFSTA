@@ -1,9 +1,12 @@
 package com.example.appcenter.companion.courses;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +26,8 @@ import java.util.Random;
 
 public class ChaptersListArrayAdapter extends ArrayAdapter {
     private List totalItemsList = new ArrayList();
+    private List<Integer> chapterProgressList = new ArrayList<>();
+    private SharedPreferences preferences;
     public class ItemViewHolder
     {
         TextView chapterNumber,chapterTitle,pageCount,chapterProgressPercentage;
@@ -32,6 +37,10 @@ public class ChaptersListArrayAdapter extends ArrayAdapter {
         totalItemsList=coursesData;
     }
 
+    public void updateChapterProgressInformation(List<Integer> chapterProgressList)
+    {
+        this.chapterProgressList=chapterProgressList;
+    }
     @Override
     public int getCount() {
         return totalItemsList.size();
@@ -64,7 +73,9 @@ public class ChaptersListArrayAdapter extends ArrayAdapter {
         viewHolder.chapterNumber.setText(chapterData[0]);
         viewHolder.pageCount.setText("Pages 1-"+chapterData[1]);
         viewHolder.chapterTitle.setText(chapterData[2]);
-        viewHolder.chapterProgressPercentage.setText((new Random().nextInt(101))+"%");
+        float progressInPercentage =((float) chapterProgressList.get(position))/((float)Integer.parseInt(chapterData[1]));
+        progressInPercentage*=100.0f;
+        viewHolder.chapterProgressPercentage.setText((int)progressInPercentage+"%");
         int width = convertView.getWidth()/4-10;
         viewHolder.chapterProgressPercentage.setWidth(width);
         return convertView;

@@ -60,6 +60,7 @@ public class ExamPrepScoreReview extends AppCompatActivity {
         entries.add(new PieEntry(scorePercentage,"Correct %"));
         entries.add(new PieEntry(100.0f-scorePercentage,"Incorrect %"));
         PieDataSet dataSet = new PieDataSet(entries, "");
+        dataSet.setDrawValues(false);
         dataSet.setColors(new int[]{R.color.lightGreen,R.color.lightRed},this);
         Description description=new Description();
         description.setText("");
@@ -68,7 +69,7 @@ public class ExamPrepScoreReview extends AppCompatActivity {
         legend.setForm(Legend.LegendForm.CIRCLE);
         legend.setWordWrapEnabled(true);
         PieData data = new PieData(dataSet);
-        pieChart.setCenterText(String.format("%.1f",scorePercentage));
+        pieChart.setCenterText(String.format("%.1f",scorePercentage)+"%");
         pieChart.setCenterTextColor(R.color.lightGreen);
         pieChart.setUsePercentValues(true);
         pieChart.setDrawSliceText(false);
