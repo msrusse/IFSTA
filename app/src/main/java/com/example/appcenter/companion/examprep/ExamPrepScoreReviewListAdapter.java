@@ -62,6 +62,9 @@ public class ExamPrepScoreReviewListAdapter extends ArrayAdapter{
                 LinearLayout linearLayout=(LinearLayout)vi.findViewById(R.id.wrong_questions_review_listview_layout);
                 if(position%2==0)
                     linearLayout.setBackgroundColor(getContext().getResources().getColor(R.color.darkWhite));
+                else
+                    linearLayout.setBackgroundColor(getContext().getResources().getColor(R.color.lightWhite));
+
                 holder.question =(TextView) vi.findViewById(R.id.question);
                 holder.correctAnswer =(TextView) vi.findViewById(R.id.correct_answer);
                 holder.wrongAnswer =(TextView) vi.findViewById(R.id.wrong_answer);
@@ -78,8 +81,10 @@ public class ExamPrepScoreReviewListAdapter extends ArrayAdapter{
               holder.questionNumber.setText(chapterNumber);
             holder.question.setText(questionData[6]);
             holder.correctAnswer.setText(questionData[Integer.parseInt(questionData[8])+choiceOffset]);
+        if(choiceSelectedIndex.get(position)!=-1)
             holder.wrongAnswer.setText(questionData[choiceSelectedIndex.get(position)+choiceOffset]);
-
+        else
+            holder.wrongAnswer.setText("");
             return vi;
         }
 

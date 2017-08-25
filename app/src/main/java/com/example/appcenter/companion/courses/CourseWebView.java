@@ -92,7 +92,7 @@ public class CourseWebView extends AppCompatActivity {
     private void loadUrl() {
 
         setBrowserSettings();
-        myWebChromeClient = new MyWebChromeClient(mwebView,mProgressDialog);
+        myWebChromeClient = new MyWebChromeClient(mwebView,mProgressDialog,scomWebView,chapterURL,this);
         scomWebView.setWebChromeClient(myWebChromeClient);
         scomWebView.setWebViewClient(new WebViewClient() {
 
@@ -142,7 +142,7 @@ public class CourseWebView extends AppCompatActivity {
             public void onReceiveValue(String chapterTitle) {
                 SharedPreferences.Editor editor=sharedPreferences.edit();
                 editor.putString(chapterURL,chapterTitle);
-                Log.e("HELLO",chapterTitle);
+                Log.e("HELLO",chapterURL);
                 editor.commit();
                  mwebView.destroy();
                  scomWebView.destroy();

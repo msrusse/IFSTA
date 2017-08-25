@@ -63,7 +63,7 @@ public class CourseChaptersList extends Fragment implements AdapterView.OnItemCl
                 };
                 String[] chapterIdFromatting= identifyDataListItem[0].split("_");
 
-                identifyDataListItem[0]="Chapter "+chapterIdFromatting[1]+" Lesson "+chapterIdFromatting[2];
+                identifyDataListItem[0]="Chapter "+chapterIdFromatting[1];
                 courseChaptersDataList.add(identifyDataListItem);
                 c.moveToNext();
             }

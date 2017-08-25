@@ -58,7 +58,7 @@ public class IdentifyTestActivity extends AppCompatActivity implements RadioGrou
 
             String imageRef = questionInformation[2];
             if (imageRef.length() != 0) {
-                imageReferences.setText("Photo courtesy of: " + imageRef);
+                imageReferences.setText("Courtesy of: " + imageRef);
             }
             correctOptionId = Integer.parseInt(questionInformation[3]);
 
