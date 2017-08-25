@@ -43,7 +43,8 @@ public class MyWebChromeClient extends WebChromeClient{
         mWebView = webView;
         mProgressDialog=dialog;
         mScomWebView=scomWebView;
-        SharedPreferences courseProgresSharedPreferences=context.getSharedPreferences(sharedPrefsKey,Context.MODE_PRIVATE);
+
+        SharedPreferences courseProgresSharedPreferences=context.getSharedPreferences(sharedPrefsKey.substring(0,sharedPrefsKey.indexOf("/")),Context.MODE_PRIVATE);
         courseProgresSharedPreferencesEditor = courseProgresSharedPreferences.edit();
     }
 
@@ -131,9 +132,12 @@ public class MyWebChromeClient extends WebChromeClient{
                 mScomWebView.evaluateJavascript("(function() { return API.LMSGetValue(\'cmi.core.lesson_location\')})();", new ValueCallback<String>() {
                     @Override
                     public void onReceiveValue(String chapterTitle) {
+                        //Remove quotes from url.
+                        chapterTitle=chapterTitle.replace("\"","");
                         if(chapterTitle.length()!=0)
                         {
                            courseProgresSharedPreferencesEditor.putBoolean(chapterTitle,true);
+                            courseProgresSharedPreferencesEditor.commit();
                         }
 
                     }
