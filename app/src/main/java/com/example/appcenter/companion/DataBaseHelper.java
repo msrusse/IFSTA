@@ -63,7 +63,7 @@ public class DataBaseHelper extends SQLiteOpenHelper{
             SharedPreferences.Editor editor = preferences.edit();
             editor.putInt(DATABASE_VERSION_KEY,currentDatabaseVersionNumber);
             editor.commit();
-            Log.e("COPY","COPY DATABASE");
+            Log.e("DATABASE","COPY DATABASE");
             //By calling this method and empty database will be created into the default system path
             //of your application so we are gonna be able to overwrite that database with our database.
             this.getReadableDatabase();
