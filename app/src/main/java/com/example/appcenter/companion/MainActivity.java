@@ -1,6 +1,7 @@
 package com.example.appcenter.companion;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,15 +28,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         DataBaseHelper myDbHelper ;
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
 
         try {
             myDbHelper = new DataBaseHelper(this);
-            myDbHelper.createDataBase();
+            myDbHelper.createDataBase(sharedPreferences);
             myDbHelper.close();
         } catch (IOException ioe) {
             throw new Error("Unable to create database");
         }
-
 
 
         mTextMessage = (TextView) findViewById(R.id.message);

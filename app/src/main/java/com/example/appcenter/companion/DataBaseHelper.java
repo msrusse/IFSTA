@@ -1,6 +1,7 @@
 package com.example.appcenter.companion;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -31,7 +32,9 @@ public class DataBaseHelper extends SQLiteOpenHelper{
     private final Context myContext;
     //The Android's default system path of your application database.
     private static String DB_PATH;
-
+    //Change the version number other than the current one to copy the new database.
+    private int currentDatabaseVersionNumber = 2;
+    private final String DATABASE_VERSION_KEY="com.appcenter.companion.DATABASE_VERSION_KEY";
     /**
      * Constructor
      * Takes and keeps a reference of the passed context in order to access to the application assets and resources.
@@ -41,20 +44,26 @@ public class DataBaseHelper extends SQLiteOpenHelper{
 
         super(context, DB_NAME, null, 1);
         this.myContext = context;
+
         DB_PATH = "/data/data/"+myContext.getApplicationContext().getPackageName()+"/databases/";
     }
 
     /**
      * Creates a empty database on the system and rewrites it with your own database.
      * */
-    public void createDataBase() throws IOException{
+    public void createDataBase(SharedPreferences preferences) throws IOException{
 
         boolean dbExist = checkDataBase();
 
-        if(dbExist){
+        int previousVersion = preferences.getInt(DATABASE_VERSION_KEY,-1);
+
+        if(dbExist&&previousVersion==currentDatabaseVersionNumber){
             //do nothing - database already exist
         }else{
-
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt(DATABASE_VERSION_KEY,currentDatabaseVersionNumber);
+            editor.commit();
+            Log.e("COPY","COPY DATABASE");
             //By calling this method and empty database will be created into the default system path
             //of your application so we are gonna be able to overwrite that database with our database.
             this.getReadableDatabase();

@@ -1,6 +1,7 @@
 package com.example.appcenter.companion.examprep;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.Filter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.appcenter.companion.R;
@@ -26,10 +29,18 @@ public class ExamPrepChaptersListAdapter extends ArrayAdapter {
     private List displayList;
     private boolean[] isChecked;
     CustomFilter filter;
+    private boolean isProductPurchased =false;
+
+    public void setIsProductPurchased(boolean isPurchased)
+    {
+        isProductPurchased=isPurchased;
+    }
 
     public class ItemViewHolder {
+        LinearLayout linearLayout;
         TextView chapterNumber,chapterTitle,chapterQuestionsCount;
         CheckBox checkBox;
+        ImageView lockedImageView;
     }
     public ExamPrepChaptersListAdapter(Context context,int textViewResourceId,List<String[]> chaptersData)
     {
@@ -91,11 +102,14 @@ public class ExamPrepChaptersListAdapter extends ArrayAdapter {
                     Context.LAYOUT_INFLATER_SERVICE);
             convertView = vi.inflate(R.layout.practice_exam_chapters_list_item, null);
             viewHolder = new ItemViewHolder();
+            viewHolder.linearLayout = (LinearLayout)convertView.findViewById(R.id.root_layout);
             viewHolder.chapterNumber = (TextView)convertView.findViewById(R.id.chapter_number);
             viewHolder.chapterTitle = (TextView)convertView.findViewById(R.id.chapter_title);
             viewHolder.chapterQuestionsCount = (TextView)convertView.findViewById(R.id.chapter_play_time);
             viewHolder.checkBox = (CheckBox)convertView.findViewById(R.id.chapter_selection);
+            viewHolder.lockedImageView =(ImageView)convertView.findViewById(R.id.item_locked);
             convertView.setTag(viewHolder);
+
         }else
         {
             viewHolder = (ItemViewHolder)convertView.getTag();
@@ -109,6 +123,14 @@ public class ExamPrepChaptersListAdapter extends ArrayAdapter {
             viewHolder.checkBox.setChecked(true);
         else
             viewHolder.checkBox.setChecked(false);
+        if(isProductPurchased||position==0)
+        {
+            viewHolder.lockedImageView.setVisibility(View.GONE);
+            viewHolder.checkBox.setVisibility(View.VISIBLE);
+        }else {
+            viewHolder.lockedImageView.setVisibility(View.VISIBLE);
+            viewHolder.checkBox.setVisibility(View.GONE);
+        }
 
         return convertView;
     }

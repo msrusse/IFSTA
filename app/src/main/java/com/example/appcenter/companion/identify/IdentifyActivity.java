@@ -1,5 +1,6 @@
 package com.example.appcenter.companion.identify;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,7 +23,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.appcenter.companion.DataBaseHelper;
+import com.example.appcenter.companion.MainTabActivity;
 import com.example.appcenter.companion.R;
+import com.example.appcenter.companion.util.IabHelper;
+import com.example.appcenter.companion.util.IabResult;
+import com.example.appcenter.companion.util.Purchase;
+
+import static com.example.appcenter.companion.util.IabHelper.BILLING_RESPONSE_RESULT_ITEM_ALREADY_OWNED;
 
 public class IdentifyActivity extends Fragment implements View.OnClickListener{
 
@@ -29,12 +37,15 @@ public class IdentifyActivity extends Fragment implements View.OnClickListener{
     TextView answeredQuestions;
     DataBaseHelper myDbHelper;
     long totalQuestions;
+
+
     public void setAnsweredQuestionsCount()
     {
-
         long remainingQuestions =totalQuestions-myDbHelper.getAnsweredQuestionsCount();
         answeredQuestions.setText(remainingQuestions+" of "+totalQuestions+" left");
+
     }
+
     private void clearAllAnsweredQuestions()
     {
         final Context context = getActivity();
@@ -89,6 +100,7 @@ public class IdentifyActivity extends Fragment implements View.OnClickListener{
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+
         try {
             myDbHelper = new DataBaseHelper(getContext());
             myDbHelper.openDataBase();

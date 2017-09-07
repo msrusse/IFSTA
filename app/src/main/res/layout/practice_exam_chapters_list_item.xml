@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="5">
@@ -42,6 +43,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:orientation="vertical"
         >
         <CheckBox
             android:id="@+id/chapter_selection"
@@ -51,6 +53,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
 
+            />
+        <ImageView
+            android:id="@+id/item_locked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_lock_closed"
             />
     </LinearLayout>
 

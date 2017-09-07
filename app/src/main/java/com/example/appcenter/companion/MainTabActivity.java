@@ -1,26 +1,36 @@
 package com.example.appcenter.companion;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.appcenter.companion.courses.CourseChaptersList;
 import com.example.appcenter.companion.examprep.ExamPrepFragment;
 import com.example.appcenter.companion.identify.IdentifyActivity;
+import com.example.appcenter.companion.util.IabHelper;
+import com.example.appcenter.companion.util.IabResult;
+import com.example.appcenter.companion.util.Purchase;
 import com.example.appcenter.companion.videos.VideoListActivity;
+
+import static com.example.appcenter.companion.util.IabHelper.BILLING_RESPONSE_RESULT_ITEM_ALREADY_OWNED;
 
 
 /**
@@ -28,6 +38,7 @@ import com.example.appcenter.companion.videos.VideoListActivity;
  */
 
 public class MainTabActivity extends AppCompatActivity implements TabHost.OnTabChangeListener {
+    public static final String TAG = "InAppBilling";
     private FragmentTabHost mTabHost;
     private Class tabNavigationClasses[] = {null,VideoListActivity.class,IdentifyActivity.class,ExamPrepFragment.class,CourseChaptersList.class};
     private String tabNames[] = new String[5];
@@ -36,7 +47,12 @@ public class MainTabActivity extends AppCompatActivity implements TabHost.OnTabC
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_tab_view);
+        initializeTabsData();
 
+
+    }
+    private void initializeTabsData()
+    {
         //Get all the tab names and images.
         tabNames[0]="Home";
         tabImages[0]=R.mipmap.ic_home_white;
@@ -65,6 +81,7 @@ public class MainTabActivity extends AppCompatActivity implements TabHost.OnTabC
             public View createTabContent(String tag) {return view;}
         });
         //If home is selected then it should not navigate.
+
         if(tabNavigationClasses[position]!=null)
             mTabHost.addTab(setContent,tabNavigationClasses[position],null);
         else
@@ -92,5 +109,18 @@ public class MainTabActivity extends AppCompatActivity implements TabHost.OnTabC
         if(tabId.equals(tabNames[0]) )
             finish();
         }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment =  fragmentManager.findFragmentByTag(mTabHost.getCurrentTabTag());
+        if(fragment!=null)
+        {
+            fragment.onActivityResult(requestCode,resultCode,data);
+        }
+    }
+
 
 }
