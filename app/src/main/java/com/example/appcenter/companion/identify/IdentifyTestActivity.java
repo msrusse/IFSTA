@@ -128,12 +128,18 @@ public class IdentifyTestActivity extends AppCompatActivity implements RadioGrou
         for (int i = 0; i < group.getChildCount(); i++)
             options[i].setClickable(false);
 
+
         skipButton.setText("Next Question");
+
         options[correctOptionId].setBackgroundColor(Color.GREEN);
 
         if (radioButtonId[correctOptionId] == checkedId) {
             String qID = questionNumber.getText().toString().replace("Q: ", "");
             myDbHelper.setQuestionAsAnswered(qID);
+        }
+        else
+        {
+        	options[getRadioButtonIndexByID(checkedId)].setBackgroundColor(Color.RED);
         }
     }
 
