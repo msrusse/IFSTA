@@ -68,34 +68,45 @@
                 android:id="@+id/option_1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
-                android:button="@drawable/square_checkbox_selector"
                 android:background="@android:color/background_light"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+                android:button="@color/exomedia_leanback_progress_horizontal_background"
+                android:paddingStart="16dp"
+                android:textSize="18sp" />
+
             <RadioButton
                 android:id="@+id/option_2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
-                android:button="@drawable/square_checkbox_selector"
                 android:background="@android:color/background_light"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+                android:button="@color/exomedia_leanback_progress_horizontal_background"
+                android:paddingStart="16dp"
+                android:textSize="18sp" />
+
             <RadioButton
                 android:id="@+id/option_3"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
-                android:button="@drawable/square_checkbox_selector"
                 android:background="@android:color/background_light"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+                android:button="@drawable/exomedia_leanback_progress_horizontal"
+                android:paddingStart="16dp"
+                android:textSize="18sp" />
+
             <RadioButton
                 android:id="@+id/option_4"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
-                android:button="@drawable/square_checkbox_selector"
                 android:background="@android:color/background_light"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+                android:button="@drawable/exomedia_leanback_progress_horizontal"
+                android:paddingStart="16dp"
+                android:textSize="18sp" />
         </RadioGroup>
         <Button
             android:id="@+id/skip"

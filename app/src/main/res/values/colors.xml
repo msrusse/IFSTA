@@ -12,5 +12,7 @@
     <color name="lightBlue">#e9f5fd</color>
     <color name="lightGreen">#9fd29f</color>
     <color name="lightRed">#cb696b</color>
+    <color name="identifyCorrectGreen">#D9E8D3</color>
+    <color name="identifyIncorrectRed">#E2C5C5</color>
 
 </resources>
