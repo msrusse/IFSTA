@@ -81,7 +81,7 @@ public class ChaptersListArrayAdapter extends ArrayAdapter {
             viewHolder=(ItemViewHolder)convertView.getTag();
         String[] chapterData = (String[])getItem(position);
         viewHolder.chapterNumber.setText(chapterData[0]);
-        viewHolder.pageCount.setText("Pages 1-"+chapterData[1]);
+        viewHolder.pageCount.setText("Screens: "+chapterData[1]);
         viewHolder.chapterTitle.setText(chapterData[2]);
         int width = convertView.getWidth()/4-10;
         viewHolder.chapterProgressPercentage.setWidth(width);
