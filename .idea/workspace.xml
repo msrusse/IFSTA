@@ -13,14 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7405bdfe-e9dd-4d91-a5f9-26b55b633bf5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_identify.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_identify.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_videos_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_videos_list.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_layout.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="IFSTACompanionAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,70 +59,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="IdentifyActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1052">
-              <caret line="107" column="34" lean-forward="false" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_identify.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_identify.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_videos_list.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_videos_list.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-              <folding>
-                <element signature="e#1174#1199#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoListActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="61" column="9" lean-forward="false" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-              <folding>
-                <element signature="e#4899#4900#0" expanded="true" />
-                <element signature="e#4926#4927#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="list_item_layout.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_layout.xml">
           <provider selected="true" editor-type-id="android-designer2">
@@ -142,11 +72,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <file leaf-file-name="VideoListActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="30" column="106" lean-forward="false" selection-start-line="30" selection-start-column="106" selection-end-line="30" selection-end-column="106" />
+            <state relative-caret-position="-672">
+              <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemArrayAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="140" column="69" lean-forward="false" selection-start-line="140" selection-start-column="65" selection-end-line="140" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -167,8 +107,9 @@
     <findStrings>
       <find>correct</find>
       <find>checkedId</find>
-      <find>ident</find>
       <find>search</find>
+      <find>ident</find>
+      <find>bold</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2214,7 +2155,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/circular_textview_drawable.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/courses/EqualWidthHeightTextView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/DataBaseHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/videolist_action_bar_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/CustomMediaController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepFragment.java" />
@@ -2247,8 +2187,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_identify.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_videos_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java" />
       </list>
     </option>
   </component>
@@ -2721,7 +2662,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522695287853</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updates the app to correct issues 6, 8, 10, 14, 15, 16, and 17">
+      <created>1522698131439</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1522698131439</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2822,7 +2770,8 @@
     <MESSAGE value="Videos: &#10;Title changed in video play.&#10;Exo Player added.&#10;&#10;Exam Prep:&#10;Choices Shuffle added.&#10;Wrong answer review changed. &#10;" />
     <MESSAGE value="Files added for google play.&#10;End of the day commit." />
     <MESSAGE value="Updates the build and gradle files for the project to work with the updated versions of Android Studio. Also resolves Issue #3 for highlighting the incorrect answer in identification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates the build and gradle files for the project to work with the updated versions of Android Studio. Also resolves Issue #3 for highlighting the incorrect answer in identification" />
+    <MESSAGE value="Updates the app to correct issues 6, 8, 10, 14, 15, 16, and 17" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates the app to correct issues 6, 8, 10, 14, 15, 16, and 17" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3022,14 +2971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -3127,14 +3068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyTestActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="53" column="58" lean-forward="false" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_identify.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -3142,6 +3075,22 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1052">
+          <caret line="107" column="34" lean-forward="false" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoControllerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-616">
+          <caret line="57" column="13" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -3154,15 +3103,15 @@
         <state relative-caret-position="405">
           <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding>
-            <element signature="e#1174#1199#0" expanded="true" />
+            <element signature="e#1174#1199#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/identify/IdentifyTestActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1052">
-          <caret line="107" column="34" lean-forward="false" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+        <state relative-caret-position="1020">
+          <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -3176,11 +3125,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_videos_list.xml">
-      <provider editor-type-id="android-designer2">
+      <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="678">
           <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
           <folding />
         </state>
@@ -3197,22 +3146,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoControllerView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-616">
-          <caret line="57" column="13" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        <state relative-caret-position="-672">
+          <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoListActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/ItemArrayAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="61" column="9" lean-forward="false" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-          <folding>
-            <element signature="e#4899#4900#0" expanded="true" />
-            <element signature="e#4926#4927#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="229">
+          <caret line="140" column="69" lean-forward="false" selection-start-line="140" selection-start-column="65" selection-end-line="140" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>

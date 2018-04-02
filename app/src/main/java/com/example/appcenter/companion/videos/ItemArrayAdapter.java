@@ -138,7 +138,7 @@ public class ItemArrayAdapter extends ArrayAdapter implements Filterable{
         if(isBookmarked)
         {
             viewHolder.bookmarkImage.setImageResource(R.mipmap.ic_bookmark);
-            viewHolder.chapterTitle.setTypeface(null, Typeface.BOLD);
+            //viewHolder.chapterTitle.setTypeface(null, Typeface.BOLD);
 
         }
         else {
