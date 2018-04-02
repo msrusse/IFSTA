@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Companion</string>
+    <string name="app_name">HazMat 5th</string>
     <string name="title_home_page">HAZARDOUS MATERIALS\nFOR FIRST RESPONDERS</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -28,7 +28,7 @@
     <string name="wrong_title">Wrong</string>
     <string name="right_title">Right</string>
     <string name="score_title">Score(%)</string>
-    <string name="identify_delete_preferences_description">This will erase all your answered questions progress.</string>
+    <string name="identify_delete_preferences_description">This will erase all of your progress. Continue?</string>
     <string name="title_select_all_chapters">Select all chapters</string>
     <string name="toast_if_no_chapters_selected">Please select at least one chapter.</string>
     <string name="toast_if_no_options_selected">Please select all the options before continuing.</string>

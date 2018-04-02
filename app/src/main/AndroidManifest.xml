@@ -62,9 +62,9 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".examprep.ExamPrepScoreReview"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
 
-        <activity android:name=".courses.CourseWebView"></activity>
+        <activity android:name=".courses.CourseWebView"/>
 
     </application>
 

@@ -42,7 +42,7 @@ public class IdentifyActivity extends Fragment implements View.OnClickListener{
     public void setAnsweredQuestionsCount()
     {
         long remainingQuestions =totalQuestions-myDbHelper.getAnsweredQuestionsCount();
-        answeredQuestions.setText(remainingQuestions+" of "+totalQuestions+" left");
+        answeredQuestions.setText(remainingQuestions+" of "+totalQuestions);
 
     }
 

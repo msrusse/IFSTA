@@ -49,11 +49,11 @@
             android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_list_view_divider"
+            android:background="@android:color/white"
             android:divider="@android:color/black"
-            android:dividerHeight="@dimen/activity_list_view_divider"
-            android:layout_marginTop="@dimen/activity_list_view_divider"/>
+            android:dividerHeight="@dimen/activity_list_view_divider" />
 
     </LinearLayout>
 

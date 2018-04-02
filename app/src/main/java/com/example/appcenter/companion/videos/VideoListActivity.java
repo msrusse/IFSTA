@@ -48,7 +48,7 @@ public class VideoListActivity extends Fragment implements AdapterView.OnItemCli
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         itemArrayAdapter = new ItemArrayAdapter(getActivity(), R.layout.list_item_layout);
-        List csvFileContents = new ArrayList();
+        List csvFileContents;
         try {
             myDbHelper = new DataBaseHelper(getActivity());
             myDbHelper.openDataBase();
@@ -89,12 +89,12 @@ public class VideoListActivity extends Fragment implements AdapterView.OnItemCli
         return v;
     }
 
-    @Override
+   /* @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.videolist_action_bar_menu,menu);
         MenuItem item = menu.findItem(R.id.search);
-        searchView = (SearchView)item.getActionView();
+        *//*searchView = (SearchView)item.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
             @Override
@@ -107,7 +107,7 @@ public class VideoListActivity extends Fragment implements AdapterView.OnItemCli
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
-        });
+        });*//*
 
 
         MenuItemCompat.setOnActionExpandListener(item, new MenuItemCompat.OnActionExpandListener() {
@@ -126,7 +126,7 @@ public class VideoListActivity extends Fragment implements AdapterView.OnItemCli
         });
 
     }
-
+*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return true;

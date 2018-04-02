@@ -26,23 +26,25 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:gravity="center_horizontal"
             android:text="@string/title_home_page"
-            android:textColor="@android:color/white"
             android:textAppearance="@android:style/TextAppearance.Large"
-            android:textStyle="bold"/>
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
-         <TextView
-            android:layout_below="@+id/message"
-             android:layout_width="match_parent"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/message"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-             android:gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:text="@string/version_number"
-            android:textColor="@android:color/white"
             android:textAppearance="@android:style/TextAppearance.Medium"
-             android:textStyle="bold"/>
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
