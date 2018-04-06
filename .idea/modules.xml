@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IFSTACompanionAndroid.iml" filepath="$PROJECT_DIR$/IFSTACompanionAndroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/IFSTACompanionAndroid-app.iml" filepath="$PROJECT_DIR$/app/IFSTACompanionAndroid-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
