@@ -2,14 +2,20 @@ package com.example.appcenter.companion.examprep;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 
 import com.example.appcenter.companion.DataBaseHelper;
 import com.example.appcenter.companion.R;
+
+import java.lang.reflect.Field;
 
 public class ExamPrepSettings extends AppCompatActivity implements NumberPicker.OnValueChangeListener,View.OnClickListener{
     SharedPreferences sharedPreferences;
@@ -28,6 +34,7 @@ public class ExamPrepSettings extends AppCompatActivity implements NumberPicker.
         sharedPreferences=getSharedPreferences(getString(R.string.exam_prep_test_options_preference_file_key), Context.MODE_PRIVATE);
         picker.setValue(sharedPreferences.getInt(getString(R.string.max_number_of_attempts),1));
         picker.setOnValueChangedListener(this);
+        setNumberPickerTextColor(picker);
 
         myDbHelper = new DataBaseHelper(this);
         myDbHelper.openDataBase();
@@ -57,5 +64,34 @@ public class ExamPrepSettings extends AppCompatActivity implements NumberPicker.
     protected void onDestroy() {
         super.onDestroy();
         myDbHelper.close();
+    }
+
+    public static boolean setNumberPickerTextColor(NumberPicker numberPicker)
+    {
+        final int count = numberPicker.getChildCount();
+        for(int i = 0; i < count; i++){
+            View child = numberPicker.getChildAt(i);
+            if(child instanceof EditText){
+                try{
+                    Field selectorWheelPaintField = numberPicker.getClass()
+                            .getDeclaredField("mSelectorWheelPaint");
+                    selectorWheelPaintField.setAccessible(true);
+                    ((Paint)selectorWheelPaintField.get(numberPicker)).setColor(Color.WHITE);
+                    ((EditText)child).setTextColor(Color.WHITE);
+                    numberPicker.invalidate();
+                    return true;
+                }
+                catch(NoSuchFieldException e){
+                    Log.w("setNumPickerTextColor", e);
+                }
+                catch(IllegalAccessException e){
+                    Log.w("setNumPickerTextColor", e);
+                }
+                catch(IllegalArgumentException e){
+                    Log.w("setNumPickerTextColor", e);
+                }
+            }
+        }
+        return false;
     }
 }

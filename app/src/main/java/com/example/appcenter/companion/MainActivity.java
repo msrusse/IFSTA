@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         DataBaseHelper myDbHelper ;
+        setTitle(R.string.companion);
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
 
         try {

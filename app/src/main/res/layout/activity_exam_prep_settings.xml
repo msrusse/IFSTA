@@ -4,72 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
     android:orientation="vertical"
+    android:padding="8dp"
     android:weightSum="4"
-    android:background="@color/transparentBlack"
     tools:context="com.example.appcenter.companion.examprep.ExamPrepSettings">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:weightSum="2"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="2">
+
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/examprep_logo"/>
+            android:src="@drawable/examprep_logo" />
+
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ifsta_text_logo"/>
+            android:src="@drawable/ifsta_text_logo" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:weightSum="2"
+        android:layout_weight="1"
         android:orientation="horizontal"
-        android:layout_weight="1">
+        android:weightSum="2">
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:text="@string/title_max_number_of_attempts"
             android:textAppearance="@android:style/TextAppearance.Medium"
-            android:text="@string/title_max_number_of_attempts"/>
+            android:textColor="@color/darkWhite" />
+
         <NumberPicker
             android:id="@+id/max_number_of_attempts_number_picker"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:descendantFocusability="blocksDescendants"
-            android:layout_height="wrap_content"></NumberPicker>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants"></NumberPicker>
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/clear_test_results_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_centerInParent="true"
+            android:layout_gravity="center"
             android:text="@string/title_clear_test_results" />
     </RelativeLayout>
+
     <RelativeLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/clear_study_deck_button"
-        android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content"
-        android:text="@string/title_clear_study_deck"/>
+        <Button
+            android:id="@+id/clear_study_deck_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_clear_study_deck" />
     </RelativeLayout>
 </LinearLayout>
