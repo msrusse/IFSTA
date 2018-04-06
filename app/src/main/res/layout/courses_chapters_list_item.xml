@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:weightSum="4"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:weightSum="4">
+
     <RelativeLayout
         android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1.05"
-        android:padding="@dimen/exam_prep_acitivity_radio_group_margin"
         android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:padding="@dimen/exam_prep_acitivity_radio_group_margin">
 
         <com.example.appcenter.companion.courses.EqualWidthHeightTextView
             android:id="@+id/chapter_progress_percentage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:scaleX=".75"
+            android:scaleY=".75"
             android:text=""
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.Medium"
@@ -23,33 +28,38 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_weight="2.95"
         android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/exam_prep_acitivity_radio_group_margin"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_weight="2.95"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/chapter_number"
-            android:text="Chapter5_1_1"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:textAppearance="@android:style/TextAppearance.Medium"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Chapter5_1_1"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/chapter_title"
-            android:text="Chapter5_1_1"
-            android:textColor="@android:color/black"
-            android:textAppearance="@android:style/TextAppearance.Small"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Chapter5_1_1"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@android:color/black" />
+
         <TextView
             android:id="@+id/page_count"
-            android:text="Chapter5_1_1"
-            android:textStyle="italic"
-            android:textColor="@android:color/black"
-            android:textAppearance="@android:style/TextAppearance.Small"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Chapter5_1_1"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@android:color/black"
+            android:textStyle="italic" />
     </LinearLayout>
 </LinearLayout>

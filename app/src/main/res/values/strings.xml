@@ -44,6 +44,7 @@
     <string name="title_max_number_of_attempts">MAX NUMBER OF ATTEMPTS</string>
     <string name="title_clear_test_results">CLEAR TEST RESULTS</string>
     <string name="title_clear_study_deck">CLEAR STUDY DECK</string>
+    <string name="companion">Companion</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="toast_identify_notification">Tap anywhere to begin.</string>
