@@ -238,8 +238,8 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
             ++totalCorrectAnswers;
         }
         if (FEEDBACK_STYLE_IMMEDIATE_ANSWERS) {
-            selectedOption.setBackgroundColor(Color.RED);
-            options[correctAnswer].setBackgroundColor(Color.GREEN);
+            selectedOption.setBackgroundColor(getResources().getColor(R.color.identifyIncorrectRed));
+            options[correctAnswer].setBackgroundColor(getResources().getColor(R.color.identifyCorrectGreen));
         }
 
 
@@ -295,7 +295,7 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
             intent.putExtra(KEY_INCORRECT_QUESTIONS_DATA, incorrectAnsweredQuestions);
             intent.putExtra(KEY_INCORRECT_CHOICES_SELECTED, incorrectAnsweredChoiceIndex);
             startActivity(intent);
-        } else if (which == 1) {
+        } else if (which == 1 || which == 3) {
             Intent intent = new Intent(this, MainTabActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra(MainActivity.KEY_SELECTED_TAB, ExamPrepTestActivity.EXAM_PREP_BOTTOM_NAVIGATION_POSTION);
@@ -309,7 +309,7 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
     }
 
     private void exitOptions(String message) {
-        CharSequence exitOptions[] = new CharSequence[]{"Exit with score", "Exit without score", "Cancel"};
+        CharSequence exitOptions[] = new CharSequence[]{"Score and exit?", "Exit without Scoring?", "Cancel", "Quit"};
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
         builder1.setTitle(message);
         builder1.setItems(exitOptions, this);

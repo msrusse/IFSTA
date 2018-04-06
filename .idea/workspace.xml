@@ -12,12 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7405bdfe-e9dd-4d91-a5f9-26b55b633bf5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/IFSTACompanionAndroid-app.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepOptionsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepOptionsActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_options.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_options.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_test.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_test.xml" />
     </list>
     <ignored path="IFSTACompanionAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,12 +59,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_exam_prep_test.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_test.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="509">
+              <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExamPrepTestActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="297" column="43" lean-forward="false" selection-start-line="297" selection-start-column="43" selection-end-line="297" selection-end-column="43" />
+              <folding>
+                <element signature="e#2287#2297#0" expanded="true" />
+                <element signature="e#2368#2377#0" expanded="true" />
+                <element signature="e#3879#3889#0" expanded="true" />
+                <element signature="e#6787#6811#0" expanded="true" />
+                <element signature="e#7206#7268#0" expanded="true" />
+                <element signature="e#7342#7384#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,6 +128,8 @@
       <find>ident</find>
       <find>bold</find>
       <find>colo</find>
+      <find>mess</find>
+      <find>exitOptions</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2158,7 +2187,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/videos/VideoPlayActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_video_play.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/wrong_question_review_list_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReview.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepScoreReviewListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/courses_chapters_list_item.xml" />
@@ -2183,6 +2211,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_options.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepOptionsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_test.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java" />
       </list>
     </option>
   </component>
@@ -2658,7 +2688,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522700477330</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updates the app to correct issues 26 and 27">
+      <created>1523036532025</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1523036532025</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2684,8 +2721,8 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21209912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32705882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.326713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2763,7 +2800,8 @@
     <MESSAGE value="Updates the app to correct issues 11, 12, and 13" />
     <MESSAGE value="Updates the app to correct issue 4" />
     <MESSAGE value="Updates the app to correct issues 19, 20, 21, 22, 23" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates the app to correct issues 19, 20, 21, 22, 23" />
+    <MESSAGE value="Updates the app to correct issues 26 and 27" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates the app to correct issues 26 and 27" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2772,13 +2810,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/aidl/com/android/vending/billing/IInAppBillingService.aidl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/util/Base64.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2922,6 +2953,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="707">
           <caret line="107" column="34" lean-forward="false" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2962,17 +2994,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_identify_test.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/exam_prep_list_item_view.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3071,17 +3092,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_test.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3196,8 +3206,8 @@
         <state relative-caret-position="273">
           <caret line="47" column="46" lean-forward="false" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
           <folding>
-            <element signature="e#1367#1391#0" expanded="true" />
-            <element signature="e#3024#3061#0" expanded="true" />
+            <element signature="e#1367#1391#0" expanded="false" />
+            <element signature="e#3024#3061#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3207,18 +3217,29 @@
         <state relative-caret-position="691">
           <caret line="64" column="32" lean-forward="false" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
           <folding>
-            <element signature="e#847#880#0" expanded="true" />
-            <element signature="e#919#954#0" expanded="true" />
-            <element signature="e#994#1029#0" expanded="true" />
-            <element signature="e#1067#1100#0" expanded="true" />
-            <element signature="e#1174#1199#0" expanded="true" />
-            <element signature="e#1606#1639#0" expanded="true" />
-            <element signature="e#1678#1713#0" expanded="true" />
-            <element signature="e#1753#1788#0" expanded="true" />
-            <element signature="e#1826#1859#0" expanded="true" />
-            <element signature="e#1933#1957#0" expanded="true" />
-            <element signature="e#2873#2906#0" expanded="true" />
+            <element signature="e#847#880#0" expanded="false" />
+            <element signature="e#919#954#0" expanded="false" />
+            <element signature="e#994#1029#0" expanded="false" />
+            <element signature="e#1067#1100#0" expanded="false" />
+            <element signature="e#1174#1199#0" expanded="false" />
+            <element signature="e#1606#1639#0" expanded="false" />
+            <element signature="e#1678#1713#0" expanded="false" />
+            <element signature="e#1753#1788#0" expanded="false" />
+            <element signature="e#1826#1859#0" expanded="false" />
+            <element signature="e#1933#1957#0" expanded="false" />
+            <element signature="e#2873#2906#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/exam_prep_list_item_view.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -3227,9 +3248,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exam_prep_test.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/appcenter/companion/examprep/ExamPrepTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="297" column="43" lean-forward="false" selection-start-line="297" selection-start-column="43" selection-end-line="297" selection-end-column="43" />
+          <folding>
+            <element signature="e#2287#2297#0" expanded="true" />
+            <element signature="e#2368#2377#0" expanded="true" />
+            <element signature="e#3879#3889#0" expanded="true" />
+            <element signature="e#6787#6811#0" expanded="true" />
+            <element signature="e#7206#7268#0" expanded="true" />
+            <element signature="e#7342#7384#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
