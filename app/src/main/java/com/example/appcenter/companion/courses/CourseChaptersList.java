@@ -115,7 +115,7 @@ public class CourseChaptersList extends Fragment implements AdapterView.OnItemCl
     private void showAlertDialog(final Activity activity, final IabHelper.OnIabPurchaseFinishedListener listener)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setPositiveButton("Get Pro", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Unlock All Chapters?", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 mHelper.launchPurchaseFlow(activity,productID,1001,listener);
