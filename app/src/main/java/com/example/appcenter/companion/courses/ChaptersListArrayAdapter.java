@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -88,8 +89,20 @@ public class ChaptersListArrayAdapter extends ArrayAdapter {
         float progressInPercentage =((float) chapterProgressList.get(position))/((float)Integer.parseInt(chapterData[1]));
         progressInPercentage*=100.0f;
         if(isProductPurchased||position==0) {
-            viewHolder.chapterProgressPercentage.setText((int) progressInPercentage + "%");
-            viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable));
+            if (progressInPercentage <= 0)
+            {
+                viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable_gray));
+            }
+            else if (progressInPercentage > 0 && progressInPercentage <= 100)
+            {
+                viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable));
+            }
+            else if (progressInPercentage == 100)
+            {
+                viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable_green));
+            }
+            //viewHolder.chapterProgressPercentage.setText((int) progressInPercentage + "%");
+            //viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable));
         }else {
             viewHolder.chapterProgressPercentage.setText("");
             viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.mipmap.ic_lock_closed));
