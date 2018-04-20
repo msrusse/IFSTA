@@ -87,21 +87,23 @@ public class ChaptersListArrayAdapter extends ArrayAdapter {
         int width = convertView.getWidth()/4-10;
         viewHolder.chapterProgressPercentage.setWidth(width);
         float progressInPercentage =((float) chapterProgressList.get(position))/((float)Integer.parseInt(chapterData[1]));
-        progressInPercentage*=100.0f;
+        float progress = progressInPercentage * 100;
         if(isProductPurchased||position==0) {
-            if (progressInPercentage <= 0)
+            if (progress == 0)
             {
                 viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable_gray));
+                //viewHolder.chapterProgressPercentage.setText((int) progressInPercentage + "%");
             }
-            else if (progressInPercentage > 0 && progressInPercentage <= 100)
-            {
-                viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable));
-            }
-            else if (progressInPercentage == 100)
+            else if (progress == 100)
             {
                 viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable_green));
             }
-            //viewHolder.chapterProgressPercentage.setText((int) progressInPercentage + "%");
+            else if (progressInPercentage < 99)
+            {
+                viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable));
+            }
+
+
             //viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity,R.drawable.circular_textview_drawable));
         }else {
             viewHolder.chapterProgressPercentage.setText("");

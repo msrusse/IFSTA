@@ -12,6 +12,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -95,7 +96,11 @@ public class VideoPlayActivity extends AppCompatActivity implements View.OnClick
          Just truncating the text from the string(Warning message).
           */
         videoData[2]=videoData[2].substring(videoData[2].indexOf("<br><b>Step 1"),videoData[2].length());
-        stepsDescription.setText(Html.fromHtml(videoData[2]));
+        videoData[2] = videoData[2].replaceAll("�", "'");
+	    videoData[2] = videoData[2].replaceAll(":", ": ");
+        Spanned videosData = Html.fromHtml(videoData[2]);
+        stepsDescription.setText(videosData);
+        //stepsDescription.setText(videosData);
         bookmarkImageButton.setOnClickListener(this);
 
         videoView.setOnCompletionListener(this);
