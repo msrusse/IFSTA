@@ -104,7 +104,7 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
             //_id,qType,possible0,possible1,possible2,possible3,question,RefPage,correctAnswers
             String chapterNumber = "ch. " + (data[0].split("-"))[0] + "- pg.";
             for (int i = 0; i < options.length; i++) {
-                options[i].setText(data[i + 2]);
+                options[i].setText(data[i + 2].replaceAll(" iacute;a", "iá"));
                 options[i].setBackgroundColor(color);
                 options[i].setClickable(true);
             }
@@ -116,8 +116,8 @@ public class ExamPrepTestActivity extends AppCompatActivity implements RadioGrou
             do{
                 shuffledAnswer=randomCorrectAnswerShuffler.nextInt(4);
             }while(shuffledAnswer==correctAnswer);
-            options[correctAnswer].setText(data[shuffledAnswer+2]);
-            options[shuffledAnswer].setText(data[correctAnswer+2]);
+            options[correctAnswer].setText(data[shuffledAnswer+2].replaceAll(" iacute;a", "iá"));
+            options[shuffledAnswer].setText(data[correctAnswer+2].replaceAll(" iacute;a", "iá"));
             correctAnswer=shuffledAnswer;
 
             currentQuestionNumber++;
