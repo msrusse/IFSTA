@@ -8,15 +8,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.GridView;
 import java.io.IOException;
 
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class MainActivity extends AppCompatActivity{
 
     private TextView mTextMessage;
-    private GridView mBottomNavigationGridView;
+    private LinearLayout videosLayout, identifyLayout, examPrepLayout, coursesLayout;
     static final String bottomNavigationGridNames[] ={"Videos","Identify","Exam Prep","Courses"};
     static final int bottomNavigationGridImages[]= {R.mipmap.ic_video,R.mipmap.ic_identify_white,R.mipmap.ic_examprep_white,R.mipmap.ic_course_white};
     public static final String KEY_SELECTED_TAB = "com.example.appcenter.companion.SELECTED_TAB";
@@ -38,18 +39,62 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             throw new Error("Unable to create database");
         }
 
+        videosLayout = (LinearLayout) findViewById(R.id.videoLayout);
+        identifyLayout = (LinearLayout) findViewById(R.id.identifyLayout);
+        examPrepLayout = (LinearLayout) findViewById(R.id.examPrepLayout);
+        coursesLayout = (LinearLayout) findViewById(R.id.coursesLayout);
+
+        videosLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this,MainTabActivity.class);
+                intent.putExtra(KEY_SELECTED_TAB,0);
+                startActivity(intent);
+            }
+        });
+
+        identifyLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this,MainTabActivity.class);
+                intent.putExtra(KEY_SELECTED_TAB,1);
+                startActivity(intent);
+            }
+        });
+
+        examPrepLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this,MainTabActivity.class);
+                intent.putExtra(KEY_SELECTED_TAB,2);
+                startActivity(intent);
+            }
+        });
+
+        coursesLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this,MainTabActivity.class);
+                intent.putExtra(KEY_SELECTED_TAB,3);
+                startActivity(intent);
+            }
+        });
 
         mTextMessage = (TextView) findViewById(R.id.message);
-        mBottomNavigationGridView = (GridView) findViewById(R.id.bottom_navigation_grid_view);
+        //mBottomNavigationGridView = (GridView) findViewById(R.id.bottom_navigation_grid_view);
 
         //new Adapter class for setting the data into the grid view.
-        mBottomNavigationGridView.setAdapter(new BottomNavigationGridAdapter(this,bottomNavigationGridNames,bottomNavigationGridImages));
+        //mBottomNavigationGridView.setAdapter(new BottomNavigationGridAdapter(this,bottomNavigationGridNames,bottomNavigationGridImages));
         //To call interface onItemClick method.
-        mBottomNavigationGridView.setOnItemClickListener(this);
+        //mBottomNavigationGridView.setOnItemClickListener(this);
 
 
     }
-
+    /*
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Intent intent = new Intent(this,MainTabActivity.class);
@@ -57,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             startActivity(intent);
 
 
-    }
+    }*/
 
 
 
