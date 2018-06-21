@@ -1,49 +1,32 @@
 package com.example.appcenter.companion.courses;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.support.v4.app.Fragment;
 import android.app.ProgressDialog;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.IBinder;
-import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.webkit.CookieManager;
-import android.webkit.JsResult;
-import android.webkit.ValueCallback;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.webkit.WebViewDatabase;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
-import com.android.vending.billing.IInAppBillingService;
 import com.example.appcenter.companion.DataBaseHelper;
 import com.example.appcenter.companion.MainTabActivity;
 import com.example.appcenter.companion.R;
@@ -51,7 +34,6 @@ import com.example.appcenter.companion.util.IabHelper;
 import com.example.appcenter.companion.util.IabResult;
 import com.example.appcenter.companion.util.Inventory;
 import com.example.appcenter.companion.util.Purchase;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,7 +56,7 @@ public class CourseChaptersList extends Fragment implements AdapterView.OnItemCl
     private List<String[]> getChaptersInformation()
     {
 
-        DataBaseHelper  myDbHelper = new DataBaseHelper(getContext());
+        DataBaseHelper myDbHelper = new DataBaseHelper(getContext());
         myDbHelper.openDataBase();
         SQLiteDatabase myDataBase = myDbHelper.getSQLiteDatabaseObject();
 
@@ -105,7 +87,7 @@ public class CourseChaptersList extends Fragment implements AdapterView.OnItemCl
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
         if(isPurchased||position==0) {
-            String chapterLink = ((String[]) courseChapterInformation.get(position))[3];
+            String chapterLink = (courseChapterInformation.get(position))[3];
             Intent intent = new Intent(getActivity(), CourseWebView.class);
             intent.putExtra(KEY_SELECTED_CHAPTER_DATA, chapterLink);
             startActivityForResult(intent, PROGRESS_UPDATE_REQUEST);
@@ -137,7 +119,7 @@ public class CourseChaptersList extends Fragment implements AdapterView.OnItemCl
         dialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
             public void onShow(DialogInterface d) {
-                ImageView image = (ImageView) dialog.findViewById(R.id.goProDialogImage);
+                ImageView image = dialog.findViewById(R.id.goProDialogImage);
                 Bitmap icon = BitmapFactory.decodeResource(getResources(),
                         R.drawable.go_pro_couse_dialog_image);
                 float imageWidthInPX = (float)image.getWidth();
@@ -198,10 +180,10 @@ public class CourseChaptersList extends Fragment implements AdapterView.OnItemCl
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        android.support.v7.app.ActionBar actionBar=((AppCompatActivity) getActivity()).getSupportActionBar();
+        android.support.v7.app.ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         actionBar.setTitle(R.string.title_course);
         View v = inflater.inflate(R.layout.fragment_course_chapters_list, container, false);
-        listView = (ListView)v.findViewById(R.id.course_chapters_list);
+        listView = v.findViewById(R.id.course_chapters_list);
         listView.setAdapter(chaptersListArrayAdapter);
         if(isInAppPurchasesInitialized)
         listView.setOnItemClickListener(this);

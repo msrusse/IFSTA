@@ -92,8 +92,8 @@ public class MainTabActivity extends AppCompatActivity implements TabHost.OnTabC
         String text = tabNames[position];
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.custom_tab, null);
-        ImageView iv = (ImageView)view.findViewById(R.id.tabs_image);
-        TextView tv = (TextView) view.findViewById(R.id.tabs_text);
+        ImageView iv = view.findViewById(R.id.tabs_image);
+        TextView tv = view.findViewById(R.id.tabs_text);
         iv.setImageResource(tabImages[position]);
         tv.setText(text);
         //For older versions supporting tint mode on Image views

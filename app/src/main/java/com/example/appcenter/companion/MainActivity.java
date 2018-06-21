@@ -2,15 +2,11 @@ package com.example.appcenter.companion;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.GridView;
 import java.io.IOException;
 
 
@@ -39,10 +35,10 @@ public class MainActivity extends AppCompatActivity{
             throw new Error("Unable to create database");
         }
 
-        videosLayout = (LinearLayout) findViewById(R.id.videoLayout);
-        identifyLayout = (LinearLayout) findViewById(R.id.identifyLayout);
-        examPrepLayout = (LinearLayout) findViewById(R.id.examPrepLayout);
-        coursesLayout = (LinearLayout) findViewById(R.id.coursesLayout);
+        videosLayout = findViewById(R.id.videoLayout);
+        identifyLayout = findViewById(R.id.identifyLayout);
+        examPrepLayout = findViewById(R.id.examPrepLayout);
+        coursesLayout = findViewById(R.id.coursesLayout);
 
         videosLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +80,7 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+        mTextMessage = findViewById(R.id.message);
         //mBottomNavigationGridView = (GridView) findViewById(R.id.bottom_navigation_grid_view);
 
         //new Adapter class for setting the data into the grid view.
