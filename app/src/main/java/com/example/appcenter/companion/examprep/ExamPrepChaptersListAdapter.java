@@ -95,43 +95,76 @@ public class ExamPrepChaptersListAdapter extends ArrayAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-       ItemViewHolder viewHolder=null;
-        if(convertView==null)
-        {
-            LayoutInflater vi = (LayoutInflater)this.getContext().getSystemService(
-                    Context.LAYOUT_INFLATER_SERVICE);
-            convertView = vi.inflate(R.layout.practice_exam_chapters_list_item, null);
-            viewHolder = new ItemViewHolder();
-            viewHolder.linearLayout = (LinearLayout)convertView.findViewById(R.id.root_layout);
-            viewHolder.chapterNumber = (TextView)convertView.findViewById(R.id.chapter_number);
-            viewHolder.chapterTitle = (TextView)convertView.findViewById(R.id.chapter_title);
-            viewHolder.chapterQuestionsCount = (TextView)convertView.findViewById(R.id.chapter_play_time);
-            viewHolder.checkBox = (CheckBox)convertView.findViewById(R.id.chapter_selection);
-            viewHolder.lockedImageView =(ImageView)convertView.findViewById(R.id.item_locked);
-            convertView.setTag(viewHolder);
+        ItemViewHolder viewHolder = null;
+        if (isProductPurchased || position == 0) {
+            if (convertView == null) {
+                LayoutInflater vi = (LayoutInflater) this.getContext().getSystemService(
+                        Context.LAYOUT_INFLATER_SERVICE);
+                convertView = vi.inflate(R.layout.practice_exam_chapters_list_item, null);
+                viewHolder = new ItemViewHolder();
+                viewHolder.linearLayout = (LinearLayout) convertView.findViewById(R.id.root_layout);
+                viewHolder.chapterNumber = (TextView) convertView.findViewById(R.id.chapter_number);
+                viewHolder.chapterTitle = (TextView) convertView.findViewById(R.id.chapter_title);
+                viewHolder.chapterQuestionsCount = (TextView) convertView.findViewById(R.id.chapter_play_time);
+                viewHolder.checkBox = (CheckBox) convertView.findViewById(R.id.chapter_selection);
+                viewHolder.lockedImageView = (ImageView) convertView.findViewById(R.id.item_locked);
+                convertView.setTag(viewHolder);
 
-        }else
-        {
-            viewHolder = (ItemViewHolder)convertView.getTag();
+            } else {
+                viewHolder = (ItemViewHolder) convertView.getTag();
+            }
+            String[] itemData = (String[]) displayList.get(position);
+            viewHolder.chapterNumber.setText("Chapter " + itemData[0]);
+            viewHolder.chapterTitle.setText(itemData[1]);
+            viewHolder.chapterQuestionsCount.setText(itemData[2] + " Questions");
+            int checkItemIndex = totalItemsList.indexOf(displayList.get(position));
+            if (isChecked[checkItemIndex])
+                viewHolder.checkBox.setChecked(true);
+            else
+                viewHolder.checkBox.setChecked(false);
+            if (isProductPurchased || position == 0) {
+                viewHolder.lockedImageView.setVisibility(View.GONE);
+                viewHolder.checkBox.setVisibility(View.VISIBLE);
+            } else {
+                viewHolder.lockedImageView.setVisibility(View.VISIBLE);
+                viewHolder.checkBox.setVisibility(View.GONE);
+            }
         }
-        String[] itemData =(String[]) displayList.get(position);
-        viewHolder.chapterNumber.setText("Chapter "+itemData[0]);
-        viewHolder.chapterTitle.setText(itemData[1]);
-        viewHolder.chapterQuestionsCount.setText(itemData[2]+" Questions");
-        int checkItemIndex=totalItemsList.indexOf(displayList.get(position));
-        if(isChecked[checkItemIndex])
-            viewHolder.checkBox.setChecked(true);
         else
-            viewHolder.checkBox.setChecked(false);
-        if(isProductPurchased||position==0)
         {
-            viewHolder.lockedImageView.setVisibility(View.GONE);
-            viewHolder.checkBox.setVisibility(View.VISIBLE);
-        }else {
-            viewHolder.lockedImageView.setVisibility(View.VISIBLE);
-            viewHolder.checkBox.setVisibility(View.GONE);
-        }
+            if (convertView == null) {
+                LayoutInflater vi = (LayoutInflater) this.getContext().getSystemService(
+                        Context.LAYOUT_INFLATER_SERVICE);
+                convertView = vi.inflate(R.layout.practice_exam_chapters_list_item_dark, null);
+                viewHolder = new ItemViewHolder();
+                viewHolder.linearLayout = (LinearLayout) convertView.findViewById(R.id.root_layout);
+                viewHolder.chapterNumber = (TextView) convertView.findViewById(R.id.chapter_number);
+                viewHolder.chapterTitle = (TextView) convertView.findViewById(R.id.chapter_title);
+                viewHolder.chapterQuestionsCount = (TextView) convertView.findViewById(R.id.chapter_play_time);
+                viewHolder.checkBox = (CheckBox) convertView.findViewById(R.id.chapter_selection);
+                viewHolder.lockedImageView = (ImageView) convertView.findViewById(R.id.item_locked);
+                convertView.setTag(viewHolder);
 
+            } else {
+                viewHolder = (ItemViewHolder) convertView.getTag();
+            }
+            String[] itemData = (String[]) displayList.get(position);
+            viewHolder.chapterNumber.setText("Chapter " + itemData[0]);
+            viewHolder.chapterTitle.setText(itemData[1]);
+            viewHolder.chapterQuestionsCount.setText(itemData[2] + " Questions");
+            int checkItemIndex = totalItemsList.indexOf(displayList.get(position));
+            if (isChecked[checkItemIndex])
+                viewHolder.checkBox.setChecked(true);
+            else
+                viewHolder.checkBox.setChecked(false);
+            if (isProductPurchased || position == 0) {
+                viewHolder.lockedImageView.setVisibility(View.GONE);
+                viewHolder.checkBox.setVisibility(View.VISIBLE);
+            } else {
+                viewHolder.lockedImageView.setVisibility(View.VISIBLE);
+                viewHolder.checkBox.setVisibility(View.GONE);
+            }
+        }
         return convertView;
     }
     @NonNull

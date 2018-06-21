@@ -109,8 +109,9 @@ public class CourseChaptersList extends Fragment implements AdapterView.OnItemCl
             Intent intent = new Intent(getActivity(), CourseWebView.class);
             intent.putExtra(KEY_SELECTED_CHAPTER_DATA, chapterLink);
             startActivityForResult(intent, PROGRESS_UPDATE_REQUEST);
-        }else
-            showAlertDialog(getActivity(),this);
+        }else {
+            showAlertDialog(getActivity(), this);
+        }
     }
     private void showAlertDialog(final Activity activity, final IabHelper.OnIabPurchaseFinishedListener listener)
     {
@@ -169,6 +170,7 @@ public class CourseChaptersList extends Fragment implements AdapterView.OnItemCl
         courseChapterInformation=getChaptersInformation();
         chaptersListArrayAdapter = new ChaptersListArrayAdapter(getContext(),R.layout.courses_chapters_list_item,courseChapterInformation,getActivity());
         updateProgressPercentage();
+        progressDialog.hide();
 
         //setup In-App Billing
         String base64 ="<YOUR_KEY_HERE>";
