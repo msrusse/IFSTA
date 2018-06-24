@@ -104,13 +104,13 @@ public class ChaptersListArrayAdapter extends ArrayAdapter {
             viewHolder.chapterProgressPercentage.setWidth(width);
             float progressInPercentage = ((float) chapterProgressList.get(position)) / ((float) Integer.parseInt(chapterData[1]));
             float progress = progressInPercentage * 100;
-                if (progress == 0) {
-                    viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity, R.drawable.circular_textview_drawable_gray));
-                } else if (progress == 100) {
-                    viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity, R.drawable.circular_textview_drawable_green));
-                } else if (progressInPercentage < 99) {
-                    viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity, R.drawable.circular_textview_drawable));
-                }
+            if (progress == 0) {
+                viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity, R.drawable.circular_textview_drawable_gray));
+            } else if (progress == 100) {
+                viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity, R.drawable.circular_textview_drawable_green));
+            } else if (progressInPercentage < 99) {
+                viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity, R.drawable.circular_textview_drawable));
+            }
         }
         else if (isProductPurchased)
         {
@@ -126,14 +126,14 @@ public class ChaptersListArrayAdapter extends ArrayAdapter {
                 convertView.setTag(viewHolder);
             } else
                 viewHolder = (ItemViewHolder) convertView.getTag();
-            String[] chapterData = (String[]) getItem(position);
-            viewHolder.chapterNumber.setText(chapterData[0]);
-            viewHolder.pageCount.setText("Screens: " + chapterData[1]);
-            viewHolder.chapterTitle.setText(chapterData[2]);
-            int width = convertView.getWidth() / 4 - 10;
-            viewHolder.chapterProgressPercentage.setWidth(width);
-            float progressInPercentage = ((float) chapterProgressList.get(position)) / ((float) Integer.parseInt(chapterData[1]));
-            float progress = progressInPercentage * 100;
+                String[] chapterData = (String[]) getItem(position);
+                viewHolder.chapterNumber.setText(chapterData[0]);
+                viewHolder.pageCount.setText("Screens: " + chapterData[1]);
+                viewHolder.chapterTitle.setText(chapterData[2]);
+                int width = convertView.getWidth() / 4 - 10;
+                viewHolder.chapterProgressPercentage.setWidth(width);
+                float progressInPercentage = ((float) chapterProgressList.get(position)) / ((float) Integer.parseInt(chapterData[1]));
+                float progress = progressInPercentage * 100;
                 if (progress == 0) {
                     viewHolder.chapterProgressPercentage.setBackground(ContextCompat.getDrawable(activity, R.drawable.circular_textview_drawable_gray));
                 } else if (progress == 100) {

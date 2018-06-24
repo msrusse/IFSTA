@@ -53,9 +53,9 @@ public class CourseWebView extends AppCompatActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         getSupportActionBar().hide();
-        startCourseButton=(Button)findViewById(R.id.start_course_button);
-        mwebView = (WebView) findViewById(R.id.web_view);
-        scomWebView = (WebView)findViewById(R.id.scom_view);
+        startCourseButton=findViewById(R.id.start_course_button);
+        mwebView = findViewById(R.id.web_view);
+        scomWebView = findViewById(R.id.scom_view);
         extraHeaders.put("x-appdata-key","w1rSBt11JJl05CmBXfarn5ib2xfx9VWF");
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setMessage("Loading...");
@@ -141,9 +141,9 @@ public class CourseWebView extends AppCompatActivity {
             public void onReceiveValue(String chapterTitle) {
                 SharedPreferences.Editor editor=sharedPreferences.edit();
                 editor.putString(chapterURL,chapterTitle);
-                editor.commit();
-                 mwebView.destroy();
-                 scomWebView.destroy();
+                editor.apply();
+                mwebView.destroy();
+                scomWebView.destroy();
             }
         });
         Intent intent = new Intent();
