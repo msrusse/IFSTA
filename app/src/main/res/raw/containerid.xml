@@ -1,4 +1,4 @@
-<<<<<<< 062bf9feea2d742708f2d926481a2a387b7a03dc
+<quiz>
 <question>
     <qID>001</qID>
     <qText>
@@ -3742,5 +3742,6 @@
 <qPicture>157.jpg</qPicture>
 <qPictureCourtesy>Rich Mahaney</qPictureCourtesy>
 <correctAnswers>3</correctAnswers>
->>>>>>> Course Tracking
 </question>
+</question>
+</quiz>
